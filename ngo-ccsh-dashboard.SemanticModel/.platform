@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "ngo-ccsh-dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "10c5b15c-c88a-48e1-b9ec-386fc9b698d3"
+  }
+}

@@ -1,0 +1,105 @@
+table dCalendario
+	lineageTag: 720f87c4-3e12-4102-a7ce-ee754875170c
+
+	column Date
+		formatString: General Date
+		lineageTag: ad4d94e7-4caf-4efc-afa4-01b479e95a4b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 8d3a664c-32f5-42b6-977c-ed56d180de1a
+			defaultHierarchy: LocalDateTable_32e1f282-8cf9-463b-9322-a13d5ca45473.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		formatString: 0
+		lineageTag: 6e1d94c5-daee-4347-9658-3499ae5fd3f1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês num'
+		formatString: 0
+		lineageTag: fb2816b4-36d9-4f2e-a9d3-2183bff3caac
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mês num]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês nome'
+		lineageTag: 9d4f3b30-591c-4dbe-a168-ccded5078b48
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mês nome]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		formatString: 0
+		lineageTag: ba29f0fb-309d-46ee-bad3-dd3e92f2745b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ano atual'
+		lineageTag: c794b912-7821-4d02-9ff2-5b3d1e9dbdc3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano atual]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês atual'
+		lineageTag: 49988213-6192-4a32-9135-1e8bf6e29c0f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mês atual]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia atual'
+		lineageTag: db5bd9de-54ac-4d06-8584-228b03954481
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Dia atual]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dCalendario = calculated
+		mode: import
+		source =
+				ADDCOLUMNS (
+				    CALENDARAUTO(),
+				    "Ano", YEAR ( [Date] ),
+				    "Mês num", MONTH ( [Date] ),
+				    "Mês nome", FORMAT ( [Date], "[$-pt-BR]mmmm" ),
+				    "Dia", DAY ( [Date] ),
+				    "Ano atual", IF ( YEAR ( [Date] ) = YEAR ( TODAY () ), "S", "N" ),
+				    "Mês atual",
+				        IF (
+				            YEAR ( [Date] ) = YEAR ( TODAY () )
+				                && MONTH ( [Date] ) = MONTH ( TODAY () ),
+				            "S",
+				            "N"
+				        ),
+				    "Dia atual",
+				        IF (
+				            YEAR ( [Date] ) = YEAR ( TODAY () )
+				                && MONTH ( [Date] ) = MONTH ( TODAY () )
+				                && DAY ( [Date] ) = DAY ( TODAY () ),
+				            "S",
+				            "N"
+				        )
+				)
+
+	annotation PBI_Id = cc8c282432de47f4bdd228e0cb61ac03
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ngo-ccsh-dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "26654d15-a0dc-4e06-87b3-9473870f1fdb"
+  }
+}

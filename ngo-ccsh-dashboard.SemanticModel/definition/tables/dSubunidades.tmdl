@@ -1,0 +1,34 @@
+table dSubunidades
+	lineageTag: faa5b78d-1a10-47cd-b8c2-0aae1e4e3bab
+
+	column Nome
+		dataType: string
+		lineageTag: 092c91eb-ed01-47cc-849c-933c1ff35cc3
+		summarizeBy: none
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Classificação
+		dataType: string
+		lineageTag: 04f8947a-1940-4941-b5a6-4b66a5300d5d
+		summarizeBy: none
+		sourceColumn: Classificação
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dSubunidades = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1_Xtx0snoLOuKp9DWR1D9C6kG4rZpVVOQyo8zCd1N5fY/edit?usp=sharing"),
+				    #"lista - subunidades_Table" = Source{[name="lista - subunidades",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"lista - subunidades_Table", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Nome", type text}, {"Classificação", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

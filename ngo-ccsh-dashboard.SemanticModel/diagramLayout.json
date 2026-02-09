@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 887,
+            "y": 200.5
+          },
+          "nodeIndex": "dFinalidades",
+          "nodeLineageTag": "38544813-ed5c-4f44-a6b6-d0eedb8dbf8d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 42,
+            "y": 216.5
+          },
+          "nodeIndex": "dSubunidades",
+          "nodeLineageTag": "faa5b78d-1a10-47cd-b8c2-0aae1e4e3bab",
+          "size": {
+            "height": 163,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 507,
+            "y": 452.5
+          },
+          "nodeIndex": "Transações",
+          "nodeLineageTag": "d4a51c54-a899-4bbd-9d9b-358e6d75fa7f",
+          "size": {
+            "height": 327,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 506,
+            "y": 0
+          },
+          "nodeIndex": "dCalendario",
+          "nodeLineageTag": "720f87c4-3e12-4102-a7ce-ee754875170c",
+          "size": {
+            "height": 295,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
