@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b4e06200c76ab67a51ef",
+  "name": "21b957e6d40e8af9d9d1",
   "position": {
     "x": 0,
-    "y": 111.58043940467753,
-    "z": 0,
-    "height": 322.94826364280652,
-    "width": 647.710843373494,
-    "tabOrder": 0
+    "y": 434.52870304748404,
+    "z": 4001,
+    "height": 285.75478384124733,
+    "width": 1280,
+    "tabOrder": 4001
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Transações"
+                      "Entity": "dCalendario"
                     }
                   },
-                  "Property": "Subunidade"
+                  "Property": "Mês nome"
                 }
               },
-              "queryRef": "Transações.Subunidade",
-              "nativeQueryRef": "Subunidade",
+              "queryRef": "dCalendario.Mês nome",
+              "nativeQueryRef": "Mês nome",
               "active": true
             }
           ]

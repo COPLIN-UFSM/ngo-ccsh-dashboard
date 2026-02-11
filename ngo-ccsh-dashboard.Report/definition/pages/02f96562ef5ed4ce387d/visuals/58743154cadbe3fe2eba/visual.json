@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "58743154cadbe3fe2eba",
+  "position": {
+    "x": 348.34868887313962,
+    "y": 68.036853295535082,
+    "z": 5,
+    "height": 262.1686746987952,
+    "width": 446.32175761871014,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCalendario"
+                    }
+                  },
+                  "Property": "Mês nome"
+                }
+              },
+              "queryRef": "dCalendario.Mês nome",
+              "nativeQueryRef": "Mês nome",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Montante (normalizado)"
+                }
+              },
+              "queryRef": "Transações.Montante (normalizado)",
+              "nativeQueryRef": "Montante (normalizado)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Transações"
+                  }
+                },
+                "Property": "Montante (normalizado)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

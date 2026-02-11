@@ -18,20 +18,20 @@ table dCalendario
 	column Ano
 		formatString: 0
 		lineageTag: 6e1d94c5-daee-4347-9658-3499ae5fd3f1
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Ano]
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column 'Mês num'
 		formatString: 0
 		lineageTag: fb2816b4-36d9-4f2e-a9d3-2183bff3caac
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Mês num]
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column 'Mês nome'
 		lineageTag: 9d4f3b30-591c-4dbe-a168-ccded5078b48
@@ -44,11 +44,11 @@ table dCalendario
 	column Dia
 		formatString: 0
 		lineageTag: ba29f0fb-309d-46ee-bad3-dd3e92f2745b
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Dia]
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column 'Ano atual'
 		lineageTag: c794b912-7821-4d02-9ff2-5b3d1e9dbdc3

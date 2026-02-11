@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "6a1aef0292504e638f26",
+  "position": {
+    "x": 0,
+    "y": 68.036853295535082,
+    "z": 3,
+    "height": 262.1686746987952,
+    "width": 348.34868887313962,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "gauge",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Montante (normalizado)"
+                }
+              },
+              "queryRef": "Transações.Montante (normalizado)",
+              "nativeQueryRef": "Montante (normalizado)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Transações"
+                  }
+                },
+                "Property": "Montante (normalizado)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

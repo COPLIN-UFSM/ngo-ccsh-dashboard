@@ -1,0 +1,124 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "54b57d79b3e5d7b2e48b",
+  "position": {
+    "x": 0,
+    "y": 340.18426647767541,
+    "z": 2,
+    "height": 380.099220411056,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Data Lançamento"
+                }
+              },
+              "queryRef": "Transações.Data Lançamento",
+              "nativeQueryRef": "Data Lançamento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Subunidade"
+                }
+              },
+              "queryRef": "Transações.Subunidade",
+              "nativeQueryRef": "Subunidade"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Montante (normalizado)"
+                }
+              },
+              "queryRef": "Transações.Montante (normalizado)",
+              "nativeQueryRef": "Montante (normalizado)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Natureza"
+                }
+              },
+              "queryRef": "Transações.Natureza",
+              "nativeQueryRef": "Natureza"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Finalidade (detalhada)"
+                }
+              },
+              "queryRef": "Transações.Finalidade (detalhada)",
+              "nativeQueryRef": "Finalidade (detalhada)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Descrição"
+                }
+              },
+              "queryRef": "Transações.Descrição",
+              "nativeQueryRef": "Descrição"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Transações"
+                  }
+                },
+                "Property": "Data Lançamento"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

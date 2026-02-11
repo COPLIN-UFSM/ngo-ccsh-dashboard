@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "f672d88c6a62f826f68a",
   "position": {
-    "x": 648.14981273408239,
-    "y": 396.9438202247191,
+    "x": 647.710843373494,
+    "y": 111.58043940467753,
     "z": 3000,
-    "height": 323.11610486891385,
-    "width": 631.85018726591761,
+    "height": 322.94826364280652,
+    "width": 632.289156626506,
     "tabOrder": 3000
   },
   "visual": {
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Transações"
-                        }
-                      },
-                      "Property": "Montante (R$)"
+                    "SourceRef": {
+                      "Entity": "Transações"
                     }
                   },
-                  "Function": 0
+                  "Property": "Montante (normalizado)"
                 }
               },
-              "queryRef": "CountNonNull(Transações.Montante (R$))",
-              "nativeQueryRef": "Sum of Montante (R$)"
+              "queryRef": "Transações.Montante (normalizado)",
+              "nativeQueryRef": "Montante (normalizado)"
             }
           ]
         }
@@ -60,23 +55,19 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Transações"
-                      }
-                    },
-                    "Property": "Montante (R$)"
+                  "SourceRef": {
+                    "Entity": "Transações"
                   }
                 },
-                "Function": 0
+                "Property": "Montante (normalizado)"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {

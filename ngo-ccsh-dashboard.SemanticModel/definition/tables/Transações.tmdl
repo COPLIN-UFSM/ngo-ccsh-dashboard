@@ -1,6 +1,11 @@
 table Transações
 	lineageTag: d4a51c54-a899-4bbd-9d9b-358e6d75fa7f
 
+	measure 'Montante (normalizado)' = ABS(SUM('Transações'[Montante (R$)]))
+		lineageTag: 9e15c4f4-8296-4d5d-86f5-41e8c8ad212d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Linha
 		dataType: int64
 		formatString: 0
@@ -12,7 +17,7 @@ table Transações
 
 	column 'Data Lançamento'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: e749102b-cafa-4291-a588-6ab766fb45a9
 		summarizeBy: none
 		sourceColumn: Data Lançamento
@@ -74,6 +79,22 @@ table Transações
 		lineageTag: 1a407dd0-e723-44a6-95e5-815e9ceeddbc
 		summarizeBy: none
 		sourceColumn: PEN Pagamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Finalidade (detalhada)'
+		dataType: string
+		lineageTag: f331fc9c-896b-4104-a22d-17b2dd524ee4
+		summarizeBy: none
+		sourceColumn: Finalidade (detalhada)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 38bda63d-76b7-4478-bd6d-8bf343d8e26d
+		summarizeBy: none
+		sourceColumn: Descrição
 
 		annotation SummarizationSetBy = Automatic
 
