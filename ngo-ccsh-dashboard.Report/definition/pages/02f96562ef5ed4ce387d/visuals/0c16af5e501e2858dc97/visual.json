@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "ab87ea61c9ae88bbeceb",
+  "name": "0c16af5e501e2858dc97",
   "position": {
     "x": 715.67567567567562,
     "y": 7.5675675675675675,
-    "z": 1000,
+    "z": 0,
     "height": 69.189189189189179,
     "width": 564.32432432432427,
-    "tabOrder": 1000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "slicer",
@@ -88,17 +88,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'Cursos'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Departamentos'"
+                    "Value": "'Direção'"
                   }
                 }
               ],
@@ -203,7 +193,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bb0a2542701240a276a0",
+        "name": "3f0df65ae5ed4202ecea",
         "field": {
           "Column": {
             "Expression": {
@@ -217,7 +207,7 @@
         "type": "Categorical"
       },
       {
-        "name": "e915332557b1502812c8",
+        "name": "c9fe883900edb3301be5",
         "field": {
           "Column": {
             "Expression": {

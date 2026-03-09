@@ -1,0 +1,253 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "30815974c81aeb9586d6",
+  "position": {
+    "x": 0,
+    "y": 76.756756756756758,
+    "z": 2,
+    "height": 643.24324324324323,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Data Lançamento"
+                }
+              },
+              "queryRef": "Transações.Data Lançamento",
+              "nativeQueryRef": "Data Lançamento"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Montante"
+                }
+              },
+              "queryRef": "Transações.Montante",
+              "nativeQueryRef": "Montante"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Finalidade (detalhada)"
+                }
+              },
+              "queryRef": "Transações.Finalidade (detalhada)",
+              "nativeQueryRef": "Finalidade (detalhada)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Descrição"
+                }
+              },
+              "queryRef": "Transações.Descrição",
+              "nativeQueryRef": "Descrição"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Nome / Beneficiário / Setor"
+                }
+              },
+              "queryRef": "Transações.Nome / Beneficiário / Setor",
+              "nativeQueryRef": "Nome / Beneficiário / Setor"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "162.73816060874245D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Transações.Finalidade (detalhada)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "585.4865288449435D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Transações.Descrição"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cd0181d9b6e66b14b5d1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Data Lançamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f0efedd987303a691102",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Descrição"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a4088c8f41aac10bc0d5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Finalidade (detalhada)"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8dde3d093a3a7a4510ad",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Montante"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0e8942bc59b0236c12c6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Nome / Beneficiário / Setor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9320b00cb304500d442e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Tipo"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Transações",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "t"
+                          }
+                        },
+                        "Property": "Tipo"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Débito'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

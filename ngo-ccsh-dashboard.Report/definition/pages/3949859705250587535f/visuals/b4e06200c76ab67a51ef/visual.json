@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "b4e06200c76ab67a51ef",
   "position": {
-    "x": 0,
-    "y": 111.58043940467753,
+    "x": 700.54054054054052,
+    "y": 77.837837837837839,
     "z": 0,
-    "height": 322.94826364280652,
-    "width": 647.710843373494,
+    "height": 356.75675675675672,
+    "width": 579.45945945945948,
     "tabOrder": 0
   },
   "visual": {
@@ -42,11 +42,12 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Montante (normalizado)"
+                  "Property": "Montante"
                 }
               },
               "queryRef": "Transações.Montante (normalizado)",
-              "nativeQueryRef": "Montante (normalizado)"
+              "nativeQueryRef": "Montante",
+              "displayName": "Montante"
             }
           ]
         }
@@ -61,7 +62,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Montante (normalizado)"
+                "Property": "Montante"
               }
             },
             "direction": "Descending"
@@ -84,7 +85,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             }
@@ -113,7 +114,7 @@
                                           "Entity": "Transações"
                                         }
                                       },
-                                      "Property": "Montante (R$)"
+                                      "Property": "Montante (signed)"
                                     }
                                   },
                                   "Function": 0
@@ -145,7 +146,7 @@
                                           "Entity": "Transações"
                                         }
                                       },
-                                      "Property": "Montante (R$)"
+                                      "Property": "Montante (signed)"
                                     }
                                   },
                                   "Function": 0
@@ -180,9 +181,178 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "switchAxisPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "50L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Gasto por subunidade'"
+                }
+              }
+            }
+          }
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "60b82a10c412a35e4600",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Montante"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "968034e521a1e09032da",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Subunidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a7170f456691c042e852",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Tipo"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Transações",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "t"
+                          }
+                        },
+                        "Property": "Tipo"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Débito'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
   }
 }

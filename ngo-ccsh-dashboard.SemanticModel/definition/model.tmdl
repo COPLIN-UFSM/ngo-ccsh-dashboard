@@ -16,7 +16,7 @@ ref table Transações
 ref table dFinalidades
 ref table dSubunidades
 ref table dCalendario
-ref table DateTableTemplate_e0a508f4-ec90-433c-8ad3-eb0e364a5a31
+ref table DateTableTemplate_d8ff267f-2e67-4d2c-9fc2-906d6fc4043c
 ref table LocalDateTable_32e1f282-8cf9-463b-9322-a13d5ca45473
 
 ref cultureInfo en-US

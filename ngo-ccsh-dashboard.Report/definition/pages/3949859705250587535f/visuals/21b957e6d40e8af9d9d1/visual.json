@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "21b957e6d40e8af9d9d1",
   "position": {
-    "x": 0,
-    "y": 434.52870304748404,
-    "z": 4001,
-    "height": 285.75478384124733,
-    "width": 1280,
-    "tabOrder": 4001
+    "x": 151.35135135135135,
+    "y": 434.59459459459458,
+    "z": 3000,
+    "height": 285.40540540540542,
+    "width": 1128.6486486486485,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -29,6 +29,21 @@
               "queryRef": "dCalendario.Mês nome",
               "nativeQueryRef": "Mês nome",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCalendario"
+                    }
+                  },
+                  "Property": "Ano"
+                }
+              },
+              "queryRef": "dCalendario.Ano",
+              "nativeQueryRef": "Ano",
+              "active": true
             }
           ]
         },
@@ -42,32 +57,15 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Montante (normalizado)"
+                  "Property": "Montante"
                 }
               },
               "queryRef": "Transações.Montante (normalizado)",
-              "nativeQueryRef": "Montante (normalizado)"
+              "nativeQueryRef": "Montante",
+              "displayName": "Montante"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Transações"
-                  }
-                },
-                "Property": "Montante (normalizado)"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -84,7 +82,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             }
@@ -113,7 +111,7 @@
                                           "Entity": "Transações"
                                         }
                                       },
-                                      "Property": "Montante (R$)"
+                                      "Property": "Montante (signed)"
                                     }
                                   },
                                   "Function": 0
@@ -145,7 +143,7 @@
                                           "Entity": "Transações"
                                         }
                                       },
-                                      "Property": "Montante (R$)"
+                                      "Property": "Montante (signed)"
                                     }
                                   },
                                   "Function": 0
@@ -181,8 +179,94 @@
             ]
           }
         }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Scalar'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Gasto por mês e ano'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fe47013eb090724b4081",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Tipo"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Transações",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "t"
+                          }
+                        },
+                        "Property": "Tipo"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Débito'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

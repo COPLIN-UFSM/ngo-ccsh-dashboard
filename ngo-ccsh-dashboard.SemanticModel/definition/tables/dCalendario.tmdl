@@ -10,7 +10,7 @@ table dCalendario
 
 		variation Variation
 			isDefault
-			relationship: 8d3a664c-32f5-42b6-977c-ed56d180de1a
+			relationship: 3ba87e23-4898-4399-8977-80c5641e341c
 			defaultHierarchy: LocalDateTable_32e1f282-8cf9-463b-9322-a13d5ca45473.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -38,6 +38,7 @@ table dCalendario
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Mês nome]
+		sortByColumn: 'Mês num'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -81,7 +82,21 @@ table dCalendario
 				    CALENDARAUTO(),
 				    "Ano", YEAR ( [Date] ),
 				    "Mês num", MONTH ( [Date] ),
-				    "Mês nome", FORMAT ( [Date], "[$-pt-BR]mmmm" ),
+				    "Mês nome",  SWITCH(
+				        MONTH ([Date]),
+				        1,"Janeiro",
+				        2,"Fevereiro",
+				        3,"Março",
+				        4,"Abril",
+				        5,"Maio",
+				        6,"Junho",
+				        7,"Julho",
+				        8,"Agosto",
+				        9,"Setembro",
+				        10,"Outubro",
+				        11,"Novembro",
+				        12,"Dezembro"
+				    ),
 				    "Dia", DAY ( [Date] ),
 				    "Ano atual", IF ( YEAR ( [Date] ) = YEAR ( TODAY () ), "S", "N" ),
 				    "Mês atual",
