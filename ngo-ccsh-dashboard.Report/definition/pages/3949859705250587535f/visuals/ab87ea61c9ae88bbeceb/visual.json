@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "ab87ea61c9ae88bbeceb",
   "position": {
-    "x": 715.86626139817633,
-    "y": 7.7811550151975686,
-    "z": 1000,
-    "height": 69.057750759878417,
-    "width": 546.62613981762922,
+    "x": 912.352422907489,
+    "y": 14.66079295154185,
+    "z": 3000,
+    "height": 68.792951541850215,
+    "width": 349.60352422907488,
     "tabOrder": 1000
   },
   "visual": {
@@ -244,5 +244,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8c6cafee82d1bc7295e3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Tipo subunidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6c7a9b06b690e903ebdc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Subunidade"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

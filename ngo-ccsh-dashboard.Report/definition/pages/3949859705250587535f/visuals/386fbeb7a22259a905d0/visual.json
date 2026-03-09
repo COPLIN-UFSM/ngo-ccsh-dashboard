@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "386fbeb7a22259a905d0",
   "position": {
-    "x": 432.82674772036478,
-    "y": 7.7811550151975686,
-    "z": 2000,
-    "height": 69.057750759878417,
-    "width": 267.47720364741645,
+    "x": 716.1233480176212,
+    "y": 14.66079295154185,
+    "z": 4000,
+    "height": 68.792951541850215,
+    "width": 183.82378854625551,
     "tabOrder": 2000
   },
   "visual": {
@@ -240,5 +240,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6f326642416dd606a672",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "570b3e596030d3b48030",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Mês nome"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

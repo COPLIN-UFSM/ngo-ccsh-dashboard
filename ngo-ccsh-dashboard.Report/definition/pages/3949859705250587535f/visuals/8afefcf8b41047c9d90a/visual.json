@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "8afefcf8b41047c9d90a",
   "position": {
-    "x": 151.73252279635258,
-    "y": 98.2370820668693,
-    "z": 4000,
-    "height": 98.2370820668693,
-    "width": 256.77811550151978,
+    "x": 162.39647577092512,
+    "y": 107.13656387665198,
+    "z": 6000,
+    "height": 89.092511013215855,
+    "width": 263.89427312775331,
     "tabOrder": 4000
   },
   "visual": {
@@ -332,6 +332,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "42dc0db0072832927e48",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Montante"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
