@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ab87ea61c9ae88bbeceb",
   "position": {
-    "x": 715.67567567567562,
-    "y": 7.5675675675675675,
+    "x": 715.86626139817633,
+    "y": 7.7811550151975686,
     "z": 1000,
-    "height": 69.189189189189179,
-    "width": 564.32432432432427,
+    "height": 69.057750759878417,
+    "width": 546.62613981762922,
     "tabOrder": 1000
   },
   "visual": {
@@ -196,40 +196,53 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "bb0a2542701240a276a0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Subunidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e915332557b1502812c8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Tipo subunidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

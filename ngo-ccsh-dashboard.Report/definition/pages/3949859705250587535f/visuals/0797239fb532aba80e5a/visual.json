@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0797239fb532aba80e5a",
   "position": {
-    "x": 151.35135135135135,
-    "y": 196.75675675675674,
+    "x": 151.73252279635258,
+    "y": 225.6534954407295,
     "z": 7000,
-    "height": 237.83783783783784,
-    "width": 549.18918918918916,
+    "height": 238.29787234042556,
+    "width": 548.57142857142856,
     "tabOrder": 7000
   },
   "visual": {
@@ -229,6 +229,69 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -288,6 +351,34 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "0d3578d825a1d09c5b08",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dSubunidades"
+              }
+            },
+            "Property": "Classificação"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aae301b363bb9408b052",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Montante"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

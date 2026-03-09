@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ddf85ab3e917d1c1bd47",
   "position": {
-    "x": 425.94594594594594,
-    "y": 78.918918918918919,
+    "x": 432.82674772036478,
+    "y": 98.2370820668693,
     "z": 5000,
-    "height": 117.83783783783784,
-    "width": 274.59459459459458,
+    "height": 98.2370820668693,
+    "width": 267.47720364741645,
     "tabOrder": 5000
   },
   "visual": {
@@ -100,6 +100,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "22D"
+                }
+              }
             }
           },
           "selector": {
@@ -144,6 +151,51 @@
               "expr": {
                 "Literal": {
                   "Value": "'Heading2'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
                 }
               }
             }

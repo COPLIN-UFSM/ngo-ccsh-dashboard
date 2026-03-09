@@ -122,6 +122,17 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "logo_ccsh9223688966016509.png",
+          "path": "logo_ccsh9223688966016509.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

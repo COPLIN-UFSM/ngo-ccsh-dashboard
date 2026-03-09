@@ -189,37 +189,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3f0df65ae5ed4202ecea",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Subunidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c9fe883900edb3301be5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Tipo subunidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

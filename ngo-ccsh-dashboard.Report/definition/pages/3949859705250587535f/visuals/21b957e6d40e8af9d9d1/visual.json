@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "21b957e6d40e8af9d9d1",
   "position": {
-    "x": 151.35135135135135,
-    "y": 434.59459459459458,
+    "x": 151.73252279635258,
+    "y": 487.29483282674772,
     "z": 3000,
-    "height": 285.40540540540542,
-    "width": 1128.6486486486485,
+    "height": 214.95440729483283,
+    "width": 1110.7598784194529,
     "tabOrder": 3000
   },
   "visual": {
@@ -207,6 +207,51 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -266,6 +311,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "e39348c3b8038c2c94b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Mês nome"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "288b7c3b1988bdeab2dd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "16ba40cf8317e994ce42",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Montante"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
