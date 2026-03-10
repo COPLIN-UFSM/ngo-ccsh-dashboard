@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ddf85ab3e917d1c1bd47",
   "position": {
     "x": 444.33480176211452,
@@ -23,11 +23,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Montante"
+                  "Property": "Créditos IDR"
                 }
               },
-              "queryRef": "Transações.Montante (normalizado)",
-              "nativeQueryRef": "Montante"
+              "queryRef": "Transações.Créditos IDR",
+              "nativeQueryRef": "Créditos IDR"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Montante"
+                "Property": "Créditos IDR"
               }
             },
             "direction": "Descending"
@@ -124,7 +124,7 @@
             }
           },
           "selector": {
-            "metadata": "Transações.Montante (normalizado)"
+            "metadata": "Transações.Créditos IDR"
           }
         }
       ]
@@ -208,7 +208,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "5857d522983862151223",
+        "name": "f0acb51080320d7c3e30",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Créditos IDR"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "72060bcc76414a083714",
         "field": {
           "Column": {
             "Expression": {
@@ -249,68 +263,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'IDR  - Capital'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
-        }
-      },
-      {
-        "name": "98d85ed3cd80b62250c2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Tipo"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "t",
-              "Entity": "Transações",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "t"
-                          }
-                        },
-                        "Property": "Tipo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Crédito'"
+                          "Value": "'IDR - Capital'"
                         }
                       }
                     ]
@@ -321,20 +274,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "229362be097b7069260e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Montante"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

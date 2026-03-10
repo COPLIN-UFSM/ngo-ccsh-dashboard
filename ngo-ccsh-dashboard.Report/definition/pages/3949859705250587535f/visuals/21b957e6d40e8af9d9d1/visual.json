@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "21b957e6d40e8af9d9d1",
   "position": {
-    "x": 162.39647577092512,
-    "y": 487.18942731277531,
+    "x": 170.21276595744681,
+    "y": 487.29483282674772,
     "z": 5000,
-    "height": 215.40088105726872,
-    "width": 1099.5594713656387,
+    "height": 214.95440729483283,
+    "width": 770.33434650455933,
     "tabOrder": 3000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "dCalendario.Mês nome",
-              "nativeQueryRef": "Mês nome",
-              "active": true
+              "nativeQueryRef": "Mês",
+              "active": true,
+              "displayName": "Mês"
             },
             {
               "field": {
@@ -57,12 +58,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Montante"
+                  "Property": "Débitos totais"
                 }
               },
-              "queryRef": "Transações.Montante (normalizado)",
-              "nativeQueryRef": "Montante",
-              "displayName": "Montante"
+              "queryRef": "Transações.Débitos totais",
+              "nativeQueryRef": "Débitos totais"
             }
           ]
         }
@@ -85,90 +85,25 @@
                   "Value": "1D"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
       ],
       "dataPoint": [
         {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Transações"
-                                        }
-                                      },
-                                      "Property": "Montante (signed)"
-                                    }
-                                  },
-                                  "Function": 0
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#D64550'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 2,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Transações"
-                                        }
-                                      },
-                                      "Property": "Montante (signed)"
-                                    }
-                                  },
-                                  "Function": 0
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#118DFF'"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
@@ -177,6 +112,22 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       ],
@@ -187,6 +138,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'Scalar'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Período'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -201,7 +172,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Gasto por mês e ano'"
+                  "Value": "'Despesas por mês e ano'"
                 }
               }
             }
@@ -259,60 +230,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fe47013eb090724b4081",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Tipo"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "t",
-              "Entity": "Transações",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "t"
-                          }
-                        },
-                        "Property": "Tipo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Débito'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "f7fd102fde2313b38d36",
         "field": {
           "Column": {
@@ -341,7 +258,7 @@
         "type": "Advanced"
       },
       {
-        "name": "9219a0b3a4033c9c48ad",
+        "name": "d5134c7260e7eded91a5",
         "field": {
           "Measure": {
             "Expression": {
@@ -349,7 +266,7 @@
                 "Entity": "Transações"
               }
             },
-            "Property": "Montante"
+            "Property": "Débitos totais"
           }
         },
         "type": "Advanced"

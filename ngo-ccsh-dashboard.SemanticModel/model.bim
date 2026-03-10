@@ -8,7 +8,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\"]"
+        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\",\"Errors in Transações\",\"pendências\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -21,18 +21,441 @@
         "name": "en-US",
         "linguisticMetadata": {
           "content": {
+            "Agents": {
+              "Internal": {
+                "Version": "1.1.0"
+              }
+            },
             "Entities": {
-              "transações.montante": {
+              "d_calendario": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Montante"
+                    "ConceptualEntity": "dCalendario"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "Montante": {
+                    "d calendario": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "dCalendario": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "d_calendario.ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Ano"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_calendario.ano_atual": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Ano atual"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano atual": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_calendario.date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "period": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "d_calendario.date.date_hierarchy": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "Hierarchy": "Date Hierarchy",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date hierarchy": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "d_calendario.date.day": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Day",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment day": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period day": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "d_calendario.date.month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Month",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date mth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "mth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "moment month": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period month": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "d_calendario.date.quarter": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Quarter",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date qtr": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "qtr": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.818
+                    }
+                  },
+                  {
+                    "moment quarter": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period quarter": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "d_calendario.date.year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Year",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date yr": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "yr": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "moment year": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period year": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "d_calendario.dia": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Dia"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dia": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_calendario.dia_atual": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Dia atual"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dia atual": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_calendario.mês_atual": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Mês atual"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "mês atual": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "mê atual": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  }
+                ]
+              },
+              "d_calendario.mês_nome": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Mês nome"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "mês nome": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "mê nome": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  },
+                  {
+                    "Mês": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -42,10 +465,2265 @@
                     }
                   }
                 ]
+              },
+              "d_calendario.mês_num": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dCalendario",
+                    "ConceptualProperty": "Mês num"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "mês num": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "mê num": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  },
+                  {
+                    "mê number": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "d_finalidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dFinalidades"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "d finalidade": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "dFinalidades": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "d_finalidade.finalidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dFinalidades",
+                    "ConceptualProperty": "Finalidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "finalidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_finalidade.tipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dFinalidades",
+                    "ConceptualProperty": "Tipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_subunidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dSubunidades"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "d subunidade": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "dSubunidades": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "d_subunidade.classificação": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dSubunidades",
+                    "ConceptualProperty": "Classificação"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "classificação": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_subunidade.nome": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dSubunidades",
+                    "ConceptualProperty": "Nome"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "nome": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "pendência": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "pendências"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "pendência": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "pendência.linhas_em_azul_com_dados_faltante": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "pendências",
+                    "ConceptualProperty": "Linhas (em azul) com dados faltantes"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "linhas (em azul) com dados faltante": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "linha (em azul) com dado faltante": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  }
+                ]
+              },
+              "transaçõe": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "transaçõe": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.créditos_IDR": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Créditos IDR"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "créditos IDR": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.créditos_totais": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Créditos totais"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "créditos totais": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.créditos_transferências": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Créditos transferências"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "créditos transferências": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.data_lançamento": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Data Lançamento"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "data lançamento": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  },
+                  {
+                    "information lançamento": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "fact lançamento": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "info lançamento": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "statistic lançamento": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "document lançamento": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "figure lançamento": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "record lançamento": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "Data": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "transaçõe.descrição__beneficiário": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Descrição + Beneficiário"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "descrição + beneficiário": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Descrição": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "transaçõe.doc_de_pagamento": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Doc de Pagamento"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "doc de pagamento": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.doc_de_solitação": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Doc de Solitação"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "doc de solitação": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débitos_totais": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débitos totais"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débitos totais": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débitos_totais_a_pagar": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débitos totais a pagar"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débitos totais a pagar": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débitos_totais_pagos": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débitos totais pagos"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débitos totais pagos": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débitos_transferências": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débitos transferências"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débitos transferências": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.empenho_SIAFI": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Empenho SIAFI"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "empenho SIAFI": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.empenho_SIE": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Empenho SIE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "empenho SIE": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.finalidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Finalidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "finalidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "transaçõe.finalidade_detalhada": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Finalidade (detalhada)"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "finalidade (detalhada)": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "finalidade": {
+                      "State": "Generated",
+                      "Weight": 0.75
+                    }
+                  }
+                ]
+              },
+              "transaçõe.linha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Linha"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "linha": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "transaçõe.lista_SIAFI": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Lista SIAFI"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "lista SIAFI": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.local___trecho": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Local / Trecho"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "local / trecho": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "local": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "local trecho": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "trecho": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "native": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "resident": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "home-grown": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "narrow": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.452
+                    }
+                  }
+                ]
+              },
+              "transaçõe.montante": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Montante"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "montante": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.pago": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Pago"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "pago": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.quantidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Quantidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quantidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.subunidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Subunidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "subunidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "transaçõe.tipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Tipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.tipo_subunidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Tipo subunidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tipo subunidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
               }
             },
             "Language": "en-US",
-            "Version": "2.0.0"
+            "Relationships": {
+              "d_calendario_date_date_hierarchy_has_d_calendario_date_day": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.date.day"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario.date.date_hierarchy"
+                      }
+                    },
+                    "ID": "date_hierarchies_have_days",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario.date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "d_calendario.date.date_hierarchy"
+                    }
+                  },
+                  "d_calendario.date.day": {
+                    "Target": {
+                      "Entity": "d_calendario.date.day"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_date_date_hierarchy_has_d_calendario_date_month": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.date.month"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario.date.date_hierarchy"
+                      }
+                    },
+                    "ID": "date_hierarchies_have_months",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario.date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "d_calendario.date.date_hierarchy"
+                    }
+                  },
+                  "d_calendario.date.month": {
+                    "Target": {
+                      "Entity": "d_calendario.date.month"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_date_date_hierarchy_has_d_calendario_date_quarter": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.date.quarter"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario.date.date_hierarchy"
+                      }
+                    },
+                    "ID": "date_hierarchies_have_quarters",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario.date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "d_calendario.date.date_hierarchy"
+                    }
+                  },
+                  "d_calendario.date.quarter": {
+                    "Target": {
+                      "Entity": "d_calendario.date.quarter"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_date_date_hierarchy_has_d_calendario_date_year": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.date.year"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario.date.date_hierarchy"
+                      }
+                    },
+                    "ID": "date_hierarchies_have_years",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario.date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "d_calendario.date.date_hierarchy"
+                    }
+                  },
+                  "d_calendario.date.year": {
+                    "Target": {
+                      "Entity": "d_calendario.date.year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_date_has_date_hierarchy": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.date.date_hierarchy"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario.date"
+                      }
+                    },
+                    "ID": "dates_have_date_hierarchies",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario.date": {
+                    "Target": {
+                      "Entity": "d_calendario.date"
+                    }
+                  },
+                  "d_calendario.date.date_hierarchy": {
+                    "Target": {
+                      "Entity": "d_calendario.date.date_hierarchy"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_ano": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.ano"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_anos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.ano": {
+                    "Target": {
+                      "Entity": "d_calendario.ano"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_ano_atual": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.ano_atual"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_ano_atuals",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.ano_atual": {
+                    "Target": {
+                      "Entity": "d_calendario.ano_atual"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_date": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.date"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_dates",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.date": {
+                    "Target": {
+                      "Entity": "d_calendario.date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_dia": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.dia"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_dias",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.dia": {
+                    "Target": {
+                      "Entity": "d_calendario.dia"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_dia_atual": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.dia_atual"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_dia_atuals",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.dia_atual": {
+                    "Target": {
+                      "Entity": "d_calendario.dia_atual"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_mês_atual": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.mês_atual"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_mês_atuals",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.mês_atual": {
+                    "Target": {
+                      "Entity": "d_calendario.mês_atual"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_mês_nome": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.mês_nome"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_mês_nome",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.mês_nome": {
+                    "Target": {
+                      "Entity": "d_calendario.mês_nome"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_calendario_has_mês_num": {
+                "Binding": {
+                  "ConceptualEntity": "dCalendario"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario.mês_num"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_mês_nums",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "d_calendario.mês_num": {
+                    "Target": {
+                      "Entity": "d_calendario.mês_num"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_finalidade_has_finalidade": {
+                "Binding": {
+                  "ConceptualEntity": "dFinalidades"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_finalidade.finalidade"
+                      },
+                      "Subject": {
+                        "Role": "d_finalidade"
+                      }
+                    },
+                    "ID": "d_finalidades_have_finalidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_finalidade": {
+                    "Target": {
+                      "Entity": "d_finalidade"
+                    }
+                  },
+                  "d_finalidade.finalidade": {
+                    "Target": {
+                      "Entity": "d_finalidade.finalidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_finalidade_has_tipo": {
+                "Binding": {
+                  "ConceptualEntity": "dFinalidades"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_finalidade.tipo"
+                      },
+                      "Subject": {
+                        "Role": "d_finalidade"
+                      }
+                    },
+                    "ID": "d_finalidades_have_tipos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_finalidade": {
+                    "Target": {
+                      "Entity": "d_finalidade"
+                    }
+                  },
+                  "d_finalidade.tipo": {
+                    "Target": {
+                      "Entity": "d_finalidade.tipo"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_subunidade_has_classificação": {
+                "Binding": {
+                  "ConceptualEntity": "dSubunidades"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_subunidade.classificação"
+                      },
+                      "Subject": {
+                        "Role": "d_subunidade"
+                      }
+                    },
+                    "ID": "d_subunidades_have_classificaçãos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_subunidade": {
+                    "Target": {
+                      "Entity": "d_subunidade"
+                    }
+                  },
+                  "d_subunidade.classificação": {
+                    "Target": {
+                      "Entity": "d_subunidade.classificação"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_subunidade_has_nome": {
+                "Binding": {
+                  "ConceptualEntity": "dSubunidades"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_subunidade.nome"
+                      },
+                      "Subject": {
+                        "Role": "d_subunidade"
+                      }
+                    },
+                    "ID": "d_subunidades_have_nome",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_subunidade": {
+                    "Target": {
+                      "Entity": "d_subunidade"
+                    }
+                  },
+                  "d_subunidade.nome": {
+                    "Target": {
+                      "Entity": "d_subunidade.nome"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "pendência_has_linhas_em_azul_com_dados_faltante": {
+                "Binding": {
+                  "ConceptualEntity": "pendências"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "pendência.linhas_em_azul_com_dados_faltante"
+                      },
+                      "Subject": {
+                        "Role": "pendência"
+                      }
+                    },
+                    "ID": "pendências_have_linhas_em_azul_com_dados_faltantes",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "pendência": {
+                    "Target": {
+                      "Entity": "pendência"
+                    }
+                  },
+                  "pendência.linhas_em_azul_com_dados_faltante": {
+                    "Target": {
+                      "Entity": "pendência.linhas_em_azul_com_dados_faltante"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_créditos_IDR": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.créditos_IDR"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_créditos_IDR",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.créditos_IDR": {
+                    "Target": {
+                      "Entity": "transaçõe.créditos_IDR"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_créditos_totais": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.créditos_totais"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_créditos_totais",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.créditos_totais": {
+                    "Target": {
+                      "Entity": "transaçõe.créditos_totais"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_créditos_transferências": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.créditos_transferências"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_créditos_transferências",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.créditos_transferências": {
+                    "Target": {
+                      "Entity": "transaçõe.créditos_transferências"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_d_calendario": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_calendario"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_d_calendarios",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe"
+                      },
+                      "Subject": {
+                        "Role": "d_calendario"
+                      }
+                    },
+                    "ID": "d_calendarios_have_transações",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_calendario": {
+                    "Nouns": [
+                      {
+                        "Data": {
+                          "State": "Generated"
+                        }
+                      }
+                    ],
+                    "Target": {
+                      "Entity": "d_calendario"
+                    }
+                  },
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_d_finalidade": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_finalidade"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_d_finalidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe"
+                      },
+                      "Subject": {
+                        "Role": "d_finalidade"
+                      }
+                    },
+                    "ID": "d_finalidades_have_transações",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_finalidade": {
+                    "Target": {
+                      "Entity": "d_finalidade"
+                    }
+                  },
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_d_subunidade": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_subunidade"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_d_subunidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe"
+                      },
+                      "Subject": {
+                        "Role": "d_subunidade"
+                      }
+                    },
+                    "ID": "d_subunidades_have_transações",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_subunidade": {
+                    "Target": {
+                      "Entity": "d_subunidade"
+                    }
+                  },
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_data_lançamento": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.data_lançamento"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_data_lançamentos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.data_lançamento": {
+                    "Target": {
+                      "Entity": "transaçõe.data_lançamento"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_descrição__beneficiário": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.descrição__beneficiário"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_descrição__beneficiários",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.descrição__beneficiário": {
+                    "Target": {
+                      "Entity": "transaçõe.descrição__beneficiário"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_doc_de_pagamento": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.doc_de_pagamento"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_doc_de_pagamentos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.doc_de_pagamento": {
+                    "Target": {
+                      "Entity": "transaçõe.doc_de_pagamento"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_doc_de_solitação": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.doc_de_solitação"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_doc_de_solitaçãos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.doc_de_solitação": {
+                    "Target": {
+                      "Entity": "transaçõe.doc_de_solitação"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_débitos_totais": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.débitos_totais"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_débitos_totais",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.débitos_totais": {
+                    "Target": {
+                      "Entity": "transaçõe.débitos_totais"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_débitos_totais_a_pagar": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.débitos_totais_a_pagar"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_débitos_totais_a_pagar",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.débitos_totais_a_pagar": {
+                    "Target": {
+                      "Entity": "transaçõe.débitos_totais_a_pagar"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_débitos_totais_pagos": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.débitos_totais_pagos"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_débitos_totais_pagos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.débitos_totais_pagos": {
+                    "Target": {
+                      "Entity": "transaçõe.débitos_totais_pagos"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_débitos_transferências": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.débitos_transferências"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_débitos_transferências",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.débitos_transferências": {
+                    "Target": {
+                      "Entity": "transaçõe.débitos_transferências"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_empenho_SIAFI": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.empenho_SIAFI"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_empenho_SIAFIs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.empenho_SIAFI": {
+                    "Target": {
+                      "Entity": "transaçõe.empenho_SIAFI"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_empenho_SIE": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.empenho_SIE"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_empenho_SIEs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.empenho_SIE": {
+                    "Target": {
+                      "Entity": "transaçõe.empenho_SIE"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_finalidade_detalhada": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.finalidade_detalhada"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_finalidade_detalhada",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.finalidade_detalhada": {
+                    "Target": {
+                      "Entity": "transaçõe.finalidade_detalhada"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_lista_SIAFI": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.lista_SIAFI"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_lista_SIAFIs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.lista_SIAFI": {
+                    "Target": {
+                      "Entity": "transaçõe.lista_SIAFI"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_local___trecho": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.local___trecho"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_local___trechos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.local___trecho": {
+                    "Target": {
+                      "Entity": "transaçõe.local___trecho"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_montante": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.montante"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_montantes",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "transaçõe.montante"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "montante_indicates_how_expensive_transações_are",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.montante": {
+                    "Target": {
+                      "Entity": "transaçõe.montante"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_pago": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.pago"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_pago",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.pago": {
+                    "Target": {
+                      "Entity": "transaçõe.pago"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_pendência": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "pendência"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_pendências",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe"
+                      },
+                      "Subject": {
+                        "Role": "pendência"
+                      }
+                    },
+                    "ID": "pendências_have_transações",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "pendência": {
+                    "Target": {
+                      "Entity": "pendência"
+                    }
+                  },
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_quantidade": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.quantidade"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_quantidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.quantidade": {
+                    "Target": {
+                      "Entity": "transaçõe.quantidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_tipo": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.tipo"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_tipos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.tipo": {
+                    "Target": {
+                      "Entity": "transaçõe.tipo"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_tipo_subunidade": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.tipo_subunidade"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_tipo_subunidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.tipo_subunidade": {
+                    "Target": {
+                      "Entity": "transaçõe.tipo_subunidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "4.1.0"
           },
           "contentType": "json"
         }
@@ -56,6 +2734,53 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Errors in Transações",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "Source = Transações,",
+          "  #\"Detected Type Mismatches\" = let",
+          "    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),",
+          "    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),",
+          "    fieldNames = Record.FieldNames(recordTypeFields),",
+          "    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),",
+          "    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = \"The type of the value does not match the type of the column.\", Detail = v], fieldTypes{i}})",
+          "in",
+          "    Table.TransformColumns(Source, pairs),",
+          "  #\"Added Index\" = Table.AddIndexColumn(#\"Detected Type Mismatches\", \"Row Number\" ,1),",
+          "  #\"Kept Errors\" = Table.SelectRowsWithErrors(#\"Added Index\", {\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Finalidade (detalhada)\", \"Pago\", \"Tipo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
+          "  #\"Reordered Columns\" = Table.ReorderColumns(#\"Kept Errors\", {\"Row Number\", \"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Finalidade (detalhada)\", \"Pago\", \"Tipo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"})",
+          "in",
+          "  #\"Reordered Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "38e9d582-874b-4907-afbb-f21d29702652",
+        "queryGroup": "Query Errors - 10/03/2026 08:05:28"
+      }
+    ],
+    "queryGroups": [
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "0"
+          }
+        ],
+        "description": "Errors in queries that were loaded on 10/03/2026 08:05:28.",
+        "folder": "Query Errors - 10/03/2026 08:05:28"
+      }
+    ],
     "relationships": [
       {
         "name": "e60f0846-7b52-9bbc-6d72-54d8ad8d05c3",
@@ -85,6 +2810,13 @@
         "fromTable": "Transações",
         "toColumn": "Date",
         "toTable": "dCalendario"
+      },
+      {
+        "name": "d94439b9-4532-9da1-d7b1-3f411e7490d6",
+        "fromColumn": "Linha",
+        "fromTable": "Transações",
+        "toColumn": "Linhas (em azul) com dados faltantes",
+        "toTable": "pendências"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -131,7 +2863,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Montante (signed)",
+            "name": "Montante",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -149,10 +2881,9 @@
             ],
             "dataType": "double",
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
-            "isHidden": true,
             "lineageTag": "ec99ea6d-faab-40a2-a9e2-3738a69537b1",
-            "sourceColumn": "Montante (signed)",
-            "summarizeBy": "none"
+            "sourceColumn": "Montante",
+            "summarizeBy": "sum"
           },
           {
             "name": "Subunidade",
@@ -207,19 +2938,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Descrição",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "38bda63d-76b7-4478-bd6d-8bf343d8e26d",
-            "sourceColumn": "Descrição",
-            "summarizeBy": "none"
-          },
-          {
             "name": "Tipo subunidade",
             "annotations": [
               {
@@ -240,7 +2958,8 @@
                 "value": "Automatic"
               }
             ],
-            "dataType": "string",
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "lineageTag": "2d0c5d08-2d15-4c43-8ce5-83e2a41bab4b",
             "sourceColumn": "Pago",
             "summarizeBy": "none"
@@ -337,7 +3056,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Nome / Beneficiário / Setor",
+            "name": "Descrição + Beneficiário",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -345,24 +3064,139 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "e842bd06-edb5-41ce-b14a-64f19aa38a77",
-            "sourceColumn": "Nome / Beneficiário / Setor",
+            "lineageTag": "8dc882b5-8b49-4416-a789-29887ebcda29",
+            "sourceColumn": "Descrição + Beneficiário",
             "summarizeBy": "none"
           }
         ],
         "lineageTag": "d4a51c54-a899-4bbd-9d9b-358e6d75fa7f",
         "measures": [
           {
-            "name": "Montante",
+            "name": "Débitos totais",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
                 "value": "{\"currencyCulture\":\"pt-BR\"}"
               }
             ],
-            "expression": "ABS(SUM('Transações'[Montante (signed)]))",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Tipo] = \"Débito\"",
+              ")"
+            ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
-            "lineageTag": "9e15c4f4-8296-4d5d-86f5-41e8c8ad212d"
+            "lineageTag": "1bbf3f09-a786-48cd-a867-ffe7073d7b57"
+          },
+          {
+            "name": "Créditos totais",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Tipo] = \"Crédito\"",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "9366692b-92ee-4e1b-9e7f-9eb20972b685"
+          },
+          {
+            "name": "Créditos IDR",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Tipo] = \"Crédito\",",
+              "    FILTER(",
+              "        'Transações',",
+              "        'Transações'[Finalidade] = \"IDR - Custeio\" || 'Transações'[Finalidade] = \"IDR - Capital\"",
+              "    )",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "63e86dae-bb4e-4cd2-8dd8-8de48d5d01a3"
+          },
+          {
+            "name": "Créditos transferências",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Tipo] = \"Crédito\",",
+              "    FILTER(",
+              "        'Transações',",
+              "        ('Transações'[Finalidade] = \"Transferência - Custeio\") || ('Transações'[Finalidade] = \"Transferência - Capital\")",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "ca34cedf-04ae-4757-9391-c42bb7569342"
+          },
+          {
+            "name": "Débitos transferências",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Tipo] = \"Débito\",",
+              "    ('Transações'[Finalidade] = \"Transferência - Custeio\") || ('Transações'[Finalidade] = \"Transferência - Capital\")",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "cb9f292d-9ea0-4b74-81ce-8b520f2d3843"
+          },
+          {
+            "name": "Débitos totais a pagar",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Tipo] = \"Débito\",",
+              "    'Transações'[Pago] = FALSE",
+              ")"
+            ],
+            "lineageTag": "ac25965d-99fe-4798-935f-56b964296bf6"
+          },
+          {
+            "name": "Débitos totais pagos",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Tipo] = \"Débito\",",
+              "    'Transações'[Pago] = TRUE",
+              ")"
+            ],
+            "lineageTag": "dbdeebfa-2935-4423-b61a-ca3f29f34d1e"
           }
         ],
         "partitions": [
@@ -378,9 +3212,16 @@
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Linha\", Int64.Type}, {\"Data Lançamento\", type date}, {\"Montante (R$)\", type number}, {\"Subunidade\", type text}, {\"Finalidade\", type text}, {\"Tipo\", type text}}),",
                 "    #\"Removed Blank Rows\" = Table.SelectRows(#\"Changed Type\", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {\"\", null}))),",
                 "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Removed Blank Rows\",{{\"Data Lançamento\", type datetime}}),",
-                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type1\",{{\"Montante (R$)\", \"Montante (signed)\"}})",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type1\",{{\"Montante (R$)\", \"Montante (signed)\"}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Renamed Columns\",\"sim\",\"True\",Replacer.ReplaceText,{\"Pago\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"não\",\"False\",Replacer.ReplaceText,{\"Pago\"}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value1\",{{\"Pago\", type logical}}),",
+                "    #\"Merged Columns\" = Table.CombineColumns(#\"Changed Type2\",{\"Descrição\", \"Nome / Beneficiário / Setor\"},Combiner.CombineTextByDelimiter(\". \", QuoteStyle.None),\"Descrição + Beneficiário\"),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Merged Columns\",{\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Finalidade (detalhada)\", \"Pago\", \"Tipo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns\",{{\"Montante (signed)\", \"Montante\"}}),",
+                "    #\"Calculated Absolute Value\" = Table.TransformColumns(#\"Renamed Columns1\",{{\"Montante\", Number.Abs, type number}})",
                 "in",
-                "    #\"Renamed Columns\""
+                "    #\"Calculated Absolute Value\""
               ],
               "type": "m"
             }
@@ -1125,6 +3966,53 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "pendências",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Linhas (em azul) com dados faltantes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54ee876f-a688-4085-a8da-f49a26fa2716",
+            "sourceColumn": "Linhas (em azul) com dados faltantes",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9f45732d-740e-42db-a28e-da89144e3e7d",
+        "partitions": [
+          {
+            "name": "pendências",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1_Xtx0snoLOuKp9DWR1D9C6kG4rZpVVOQyo8zCd1N5fY/edit?usp=sharing\"),",
+                "    pendências_Table = Source{[name=\"pendências\",ItemKind=\"Table\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(pendências_Table, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Linhas (em azul) com dados faltantes\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }

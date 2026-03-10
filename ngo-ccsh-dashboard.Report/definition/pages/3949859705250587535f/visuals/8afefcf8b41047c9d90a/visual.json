@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "8afefcf8b41047c9d90a",
   "position": {
-    "x": 162.39647577092512,
-    "y": 107.13656387665198,
+    "x": 170.21276595744681,
+    "y": 106.99088145896657,
     "z": 6000,
-    "height": 89.092511013215855,
-    "width": 263.89427312775331,
+    "height": 89.483282674772042,
+    "width": 255.80547112462008,
     "tabOrder": 4000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Montante"
+                  "Property": "Créditos IDR"
                 }
               },
-              "queryRef": "Transações.Montante (normalizado)",
-              "nativeQueryRef": "Montante"
+              "queryRef": "Transações.Créditos IDR",
+              "nativeQueryRef": "Créditos IDR"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Montante"
+                "Property": "Créditos IDR"
               }
             },
             "direction": "Descending"
@@ -117,7 +117,7 @@
             }
           },
           "selector": {
-            "metadata": "Transações.Montante (normalizado)"
+            "metadata": "Transações.Créditos IDR"
           }
         }
       ]
@@ -219,7 +219,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "5857d522983862151223",
+        "name": "3ebe1e6215e802029d74",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Créditos IDR"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "753b016119a168b0ea86",
         "field": {
           "Column": {
             "Expression": {
@@ -270,82 +284,7 @@
             }
           ]
         },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
-        }
-      },
-      {
-        "name": "98d85ed3cd80b62250c2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Tipo"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "t",
-              "Entity": "Transações",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "t"
-                          }
-                        },
-                        "Property": "Tipo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Crédito'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
-      },
-      {
-        "name": "42dc0db0072832927e48",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Montante"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

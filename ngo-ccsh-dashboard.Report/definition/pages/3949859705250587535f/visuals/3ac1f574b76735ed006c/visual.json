@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "3ac1f574b76735ed006c",
   "position": {
-    "x": 2.2555066079295156,
-    "y": 209.76211453744494,
+    "x": 12.644376899696049,
+    "y": 238.29787234042556,
     "z": 11000,
-    "height": 68.792951541850215,
-    "width": 142.09691629955947,
+    "height": 68.085106382978722,
+    "width": 126.44376899696049,
     "tabOrder": 9000
   },
   "visual": {
@@ -282,6 +282,27 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "shadowBlur": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "glow": [
@@ -362,7 +383,20 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'02f96562ef5ed4ce387d'"
+                  "Value": "'27667e800511edacbb96'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

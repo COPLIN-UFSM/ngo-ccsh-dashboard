@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "0c16af5e501e2858dc97",
+  "name": "8c4906b0403ae7cb449b",
   "position": {
-    "x": 715.67567567567562,
-    "y": 7.5675675675675675,
-    "z": 0,
-    "height": 69.189189189189179,
-    "width": 564.32432432432427,
-    "tabOrder": 0
+    "x": 716.1233480176212,
+    "y": 14.66079295154185,
+    "z": 4000,
+    "height": 68.792951541850215,
+    "width": 183.82378854625551,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Transações"
+                      "Entity": "dCalendario"
                     }
                   },
-                  "Property": "Tipo subunidade"
+                  "Property": "Ano"
                 }
               },
-              "queryRef": "Transações.Tipo subunidade",
-              "nativeQueryRef": "Tipo subunidade",
+              "queryRef": "dCalendario.Ano",
+              "nativeQueryRef": "Ano",
               "active": true
             },
             {
@@ -35,14 +35,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Transações"
+                      "Entity": "dCalendario"
                     }
                   },
-                  "Property": "Subunidade"
+                  "Property": "Mês nome"
                 }
               },
-              "queryRef": "Transações.Subunidade",
-              "nativeQueryRef": "Subunidade",
+              "queryRef": "dCalendario.Mês nome",
+              "nativeQueryRef": "Mês nome",
               "active": true
             }
           ]
@@ -57,7 +57,7 @@
         "levels": [
           {
             "queryRefs": [
-              "Transações.Tipo subunidade"
+              "dCalendario.Ano"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -65,10 +65,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Transações"
+                      "Entity": "dCalendario"
                     }
                   },
-                  "Property": "Tipo subunidade"
+                  "Property": "Ano"
                 }
               }
             ],
@@ -76,7 +76,7 @@
           },
           {
             "queryRefs": [
-              "Transações.Subunidade"
+              "dCalendario.Mês nome"
             ],
             "isCollapsed": true,
             "isPinned": true
@@ -88,7 +88,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'Direção'"
+                    "Value": "2026L"
                   }
                 }
               ],
@@ -106,13 +106,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
-                }
-              }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -180,7 +173,65 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Filtrar por subunidade'"
+                  "Value": "'Filtrar por ano e mês'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
                 }
               }
             }

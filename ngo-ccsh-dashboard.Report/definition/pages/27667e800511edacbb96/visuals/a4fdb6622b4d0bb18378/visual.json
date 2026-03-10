@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b4e06200c76ab67a51ef",
+  "name": "a4fdb6622b4d0bb18378",
   "position": {
-    "x": 716.1233480176212,
-    "y": 107.13656387665198,
-    "z": 2000,
-    "height": 364.26431718061673,
-    "width": 545.83259911894277,
-    "tabOrder": 0
+    "x": 164.82477587612061,
+    "y": 112.66503667481662,
+    "z": 12002,
+    "height": 192.99103504482477,
+    "width": 734.4091279543602,
+    "tabOrder": 12002
   },
   "visual": {
     "visualType": "barChart",
@@ -23,11 +23,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Subunidade"
+                  "Property": "Finalidade (detalhada)"
                 }
               },
-              "queryRef": "Transações.Subunidade",
-              "nativeQueryRef": "Subunidade",
+              "queryRef": "Transações.Finalidade (detalhada)",
+              "nativeQueryRef": "Finalidade (detalhada)",
               "active": true
             }
           ]
@@ -177,6 +177,13 @@
                   "Value": "50L"
                 }
               }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -188,6 +195,13 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -202,7 +216,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Despesas por subunidade'"
+                  "Value": "'Despesas por finalidade'"
                 }
               }
             }
@@ -288,10 +302,11 @@
             "Property": "Subunidade"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "howCreated": "User"
       },
       {
-        "name": "0394f29ac89e73b85c30",
+        "name": "6900774f3b262ab908dc",
         "field": {
           "Measure": {
             "Expression": {
@@ -303,6 +318,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "30a43d609c43bb3d613b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Finalidade (detalhada)"
+          }
+        },
+        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

@@ -15,6 +15,7 @@
     "filters": [
       {
         "name": "af0a2eb3e646373a1402",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -23,6 +24,60 @@
               }
             },
             "Property": "Tipo subunidade"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Transações",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "t"
+                            }
+                          },
+                          "Property": "Tipo subunidade"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'Unidades'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "7b3c831b6654a5058aaa",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Pago"
           }
         },
         "type": "Categorical",
@@ -47,7 +102,7 @@
                             "Source": "t"
                           }
                         },
-                        "Property": "Tipo subunidade"
+                        "Property": "Pago"
                       }
                     }
                   ],
@@ -55,21 +110,14 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Cursos'"
+                          "Value": "false"
                         }
                       }
                     ],
                     [
                       {
                         "Literal": {
-                          "Value": "'Departamentos'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Direção'"
+                          "Value": "true"
                         }
                       }
                     ]
@@ -79,9 +127,71 @@
             }
           ]
         },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "0c4750d0e65ba166309b",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transações"
+              }
+            },
+            "Property": "Finalidade"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Transações",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "t"
+                            }
+                          },
+                          "Property": "Finalidade"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "''"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "User"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   },
   "objects": {
     "section": [

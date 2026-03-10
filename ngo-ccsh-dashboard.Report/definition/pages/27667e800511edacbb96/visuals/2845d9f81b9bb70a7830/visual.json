@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "bfd90484b0308a1d39d1",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2845d9f81b9bb70a7830",
   "position": {
-    "x": 6.8085106382978724,
-    "y": 7.7811550151975686,
-    "z": 3000,
+    "x": 12.644376899696049,
+    "y": 14.589665653495441,
+    "z": 9000,
     "height": 131.30699088145897,
-    "width": 135.19756838905775,
-    "tabOrder": 5000
+    "width": 126.44376899696049,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "image",
@@ -83,6 +83,27 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "cornerRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "strokeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ]
     },
@@ -138,7 +159,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 911,
-            "y": 242.5
+            "y": 244.5
           },
           "nodeIndex": "dFinalidades",
           "nodeLineageTag": "38544813-ed5c-4f44-a6b6-d0eedb8dbf8d",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 42,
-            "y": 216.5
+            "y": 218.5
           },
           "nodeIndex": "dSubunidades",
           "nodeLineageTag": "faa5b78d-1a10-47cd-b8c2-0aae1e4e3bab",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 507,
-            "y": 452.5
+            "y": 454.5
           },
           "nodeIndex": "Transações",
           "nodeLineageTag": "d4a51c54-a899-4bbd-9d9b-358e6d75fa7f",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 507,
-            "y": 4
+            "y": 6
           },
           "nodeIndex": "dCalendario",
           "nodeLineageTag": "720f87c4-3e12-4102-a7ce-ee754875170c",
@@ -59,6 +59,19 @@
             "width": 234
           },
           "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 223,
+            "y": 0
+          },
+          "nodeIndex": "pendências",
+          "nodeLineageTag": "9f45732d-740e-42db-a28e-da89144e3e7d",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
