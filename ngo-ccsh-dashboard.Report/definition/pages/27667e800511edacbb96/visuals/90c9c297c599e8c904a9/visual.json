@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "90c9c297c599e8c904a9",
   "position": {
     "x": 912.7954360228199,
     "y": 112.66503667481662,
-    "z": 12003,
+    "z": 10000,
     "height": 192.99103504482477,
     "width": 349.47025264873673,
-    "tabOrder": 12003
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "gauge",
@@ -189,37 +189,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "143f0941ea4632eb4436",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Débitos totais"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "756940c5432ca0c8c5e6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Créditos IDR"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

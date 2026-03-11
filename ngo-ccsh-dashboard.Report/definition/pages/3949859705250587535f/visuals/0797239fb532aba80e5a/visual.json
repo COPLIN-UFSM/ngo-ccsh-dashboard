@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "0797239fb532aba80e5a",
   "position": {
     "x": 170.21276595744681,
@@ -254,37 +254,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "090dc0d09acdb0a4992e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dSubunidades"
-              }
-            },
-            "Property": "Classificação"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "58524c8c4b843ee33bab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Débitos totais"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

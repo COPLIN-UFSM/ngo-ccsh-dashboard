@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "2155395a70960b84a67e",
   "position": {
     "x": 164.82477587612061,
     "y": 312.958435207824,
-    "z": 12001,
+    "z": 8000,
     "height": 383.8956805215974,
     "width": 1097.4409127954359,
-    "tabOrder": 12001
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -341,67 +341,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "716ea3dc50e912843429",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Data Lançamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "638830978635d0e86617",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Finalidade (detalhada)"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "850b9d5cd57811036286",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Transações"
-                  }
-                },
-                "Property": "Montante"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b0df2fda03aa5ed24605",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Descrição + Beneficiário"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

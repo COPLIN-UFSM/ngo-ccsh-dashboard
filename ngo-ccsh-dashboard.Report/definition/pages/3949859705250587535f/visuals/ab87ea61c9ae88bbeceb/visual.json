@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "ab87ea61c9ae88bbeceb",
   "position": {
     "x": 912.352422907489,
@@ -43,7 +43,7 @@
               },
               "queryRef": "Transações.Subunidade",
               "nativeQueryRef": "Subunidade",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -82,30 +82,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Cursos'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Departamentos'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -244,37 +221,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8c6cafee82d1bc7295e3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Tipo subunidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6c7a9b06b690e903ebdc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Subunidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

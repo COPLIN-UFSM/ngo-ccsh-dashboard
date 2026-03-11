@@ -8,7 +8,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\",\"Errors in Transações\",\"pendências\"]"
+        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\",\"Errors in Transações\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -603,44 +603,6 @@
                   {
                     "nome": {
                       "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "pendência": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "pendências"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "pendência": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "pendência.linhas_em_azul_com_dados_faltante": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "pendências",
-                    "ConceptualProperty": "Linhas (em azul) com dados faltantes"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "linhas (em azul) com dados faltante": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "linha (em azul) com dado faltante": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.78
                     }
                   }
                 ]
@@ -1778,39 +1740,6 @@
                 },
                 "State": "Generated"
               },
-              "pendência_has_linhas_em_azul_com_dados_faltante": {
-                "Binding": {
-                  "ConceptualEntity": "pendências"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "pendência.linhas_em_azul_com_dados_faltante"
-                      },
-                      "Subject": {
-                        "Role": "pendência"
-                      }
-                    },
-                    "ID": "pendências_have_linhas_em_azul_com_dados_faltantes",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "pendência": {
-                    "Target": {
-                      "Entity": "pendência"
-                    }
-                  },
-                  "pendência.linhas_em_azul_com_dados_faltante": {
-                    "Target": {
-                      "Entity": "pendência.linhas_em_azul_com_dados_faltante"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
               "transaçõe_has_créditos_IDR": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
@@ -2810,13 +2739,6 @@
         "fromTable": "Transações",
         "toColumn": "Date",
         "toTable": "dCalendario"
-      },
-      {
-        "name": "d94439b9-4532-9da1-d7b1-3f411e7490d6",
-        "fromColumn": "Linha",
-        "fromTable": "Transações",
-        "toColumn": "Linhas (em azul) com dados faltantes",
-        "toTable": "pendências"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -3966,53 +3888,6 @@
           }
         ],
         "showAsVariationsOnly": true
-      },
-      {
-        "name": "pendências",
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Linhas (em azul) com dados faltantes",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "54ee876f-a688-4085-a8da-f49a26fa2716",
-            "sourceColumn": "Linhas (em azul) com dados faltantes",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "9f45732d-740e-42db-a28e-da89144e3e7d",
-        "partitions": [
-          {
-            "name": "pendências",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1_Xtx0snoLOuKp9DWR1D9C6kG4rZpVVOQyo8zCd1N5fY/edit?usp=sharing\"),",
-                "    pendências_Table = Source{[name=\"pendências\",ItemKind=\"Table\"]}[Data],",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(pendências_Table, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Linhas (em azul) com dados faltantes\", type text}})",
-                "in",
-                "    #\"Changed Type\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
       }
     ]
   }

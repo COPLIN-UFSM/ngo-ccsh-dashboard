@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "8afefcf8b41047c9d90a",
   "position": {
     "x": 170.21276595744681,
@@ -218,20 +218,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "3ebe1e6215e802029d74",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Créditos IDR"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "753b016119a168b0ea86",
         "field": {
