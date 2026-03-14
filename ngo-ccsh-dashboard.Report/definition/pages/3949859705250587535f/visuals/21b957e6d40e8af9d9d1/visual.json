@@ -4,10 +4,10 @@
   "position": {
     "x": 170.21276595744681,
     "y": 487.29483282674772,
-    "z": 5000,
+    "z": 0,
     "height": 214.95440729483283,
     "width": 770.33434650455933,
-    "tabOrder": 3000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -58,7 +58,7 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Débitos totais"
+                  "Property": "Débito Total"
                 }
               },
               "queryRef": "Transações.Débitos totais",

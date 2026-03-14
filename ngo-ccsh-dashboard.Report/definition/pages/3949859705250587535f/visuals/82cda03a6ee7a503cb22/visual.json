@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 1000,
-    "height": 98.114537444933916,
-    "width": 1280,
-    "tabOrder": 12000
+    "z": 0,
+    "height": 98.181818181818173,
+    "width": 1116.3636363636363,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "shape",
@@ -88,6 +88,33 @@
             "id": "default"
           }
         }
+      ],
+      "shadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "shadowBlur": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -120,5 +147,6 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "2960a9009dc6a9dad753",
   "howCreated": "InsertVisualButton"
 }

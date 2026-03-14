@@ -4,10 +4,10 @@
   "position": {
     "x": 170.21276595744681,
     "y": 216.89969604863222,
-    "z": 8000,
+    "z": 3000,
     "height": 254.83282674772039,
     "width": 530.09118541033433,
-    "tabOrder": 6000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "barChart",
@@ -23,11 +23,11 @@
                       "Entity": "dSubunidades"
                     }
                   },
-                  "Property": "Classificação"
+                  "Property": "Grupo"
                 }
               },
-              "queryRef": "dSubunidades.Classificação",
-              "nativeQueryRef": "Classificação",
+              "queryRef": "dSubunidades.Grupo",
+              "nativeQueryRef": "Grupo",
               "active": true
             }
           ]
@@ -42,7 +42,7 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Débitos totais"
+                  "Property": "Débito Total"
                 }
               },
               "queryRef": "Transações.Débitos totais",
@@ -61,7 +61,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Débitos totais"
+                "Property": "Débito Total"
               }
             },
             "direction": "Descending"

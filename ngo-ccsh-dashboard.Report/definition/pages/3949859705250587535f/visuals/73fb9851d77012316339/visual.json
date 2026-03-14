@@ -4,10 +4,10 @@
   "position": {
     "x": 956.6096169519152,
     "y": 487.17196414017928,
-    "z": 13000,
+    "z": 4000,
     "height": 214.89812550937245,
     "width": 304.6128769356153,
-    "tabOrder": 13000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "gauge",
@@ -23,11 +23,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Créditos IDR"
+                  "Property": "Crédito Total"
                 }
               },
-              "queryRef": "Transações.Créditos IDR",
-              "nativeQueryRef": "Créditos IDR"
+              "queryRef": "Transações.Créditos totais",
+              "nativeQueryRef": "Créditos totais"
             }
           ]
         },
@@ -41,7 +41,7 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Débitos totais"
+                  "Property": "Débito Total"
                 }
               },
               "queryRef": "Transações.Débitos totais",
@@ -60,7 +60,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Débitos totais"
+                "Property": "Débito Total"
               }
             },
             "direction": "Descending"

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "386fbeb7a22259a905d0",
   "position": {
-    "x": 716.1233480176212,
-    "y": 14.66079295154185,
-    "z": 4000,
-    "height": 68.792951541850215,
-    "width": 183.82378854625551,
-    "tabOrder": 2000
+    "x": 450.90909090909088,
+    "y": 15.454545454545453,
+    "z": 3000,
+    "height": 69.090909090909079,
+    "width": 199.99999999999997,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -95,13 +95,6 @@
                   "Value": "'Dropdown'"
                 }
               }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
@@ -132,7 +125,7 @@
             "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -146,6 +139,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }
@@ -168,6 +174,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Filtrar por ano e mês'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -234,5 +247,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "2960a9009dc6a9dad753"
 }

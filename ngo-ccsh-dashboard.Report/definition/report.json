@@ -14,62 +14,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "af0a2eb3e646373a1402",
-        "ordinal": 0,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Transações"
-              }
-            },
-            "Property": "Tipo subunidade"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "t",
-              "Entity": "Transações",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "Comparison": {
-                      "ComparisonKind": 0,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "t"
-                            }
-                          },
-                          "Property": "Tipo subunidade"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "'Unidades'"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "7b3c831b6654a5058aaa",
-        "ordinal": 1,
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -135,6 +81,60 @@
             }
           ]
         }
+      },
+      {
+        "name": "1c24f1abd3e06b0229b6",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dSubunidades"
+              }
+            },
+            "Property": "Grupo"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dSubunidades",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "Grupo"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'Unidades'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       },
       {
         "name": "0c4750d0e65ba166309b",
@@ -238,8 +238,8 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "logo_ccsh9223688966016509.png",
-          "path": "logo_ccsh9223688966016509.png",
+          "name": "v_solido_sigla-1005548070257144754.png",
+          "path": "v_solido_sigla-1005548070257144754.png",
           "type": "Image"
         }
       ]

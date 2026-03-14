@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "ab87ea61c9ae88bbeceb",
   "position": {
-    "x": 912.352422907489,
-    "y": 14.66079295154185,
-    "z": 3000,
-    "height": 68.792951541850215,
-    "width": 349.60352422907488,
-    "tabOrder": 1000
+    "x": 661.909090344617,
+    "y": 15.454545454545453,
+    "z": 2000,
+    "height": 69.090909090909079,
+    "width": 366.36363636363632,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Transações"
+                      "Entity": "dSubunidades"
                     }
                   },
-                  "Property": "Tipo subunidade"
+                  "Property": "Grupo"
                 }
               },
-              "queryRef": "Transações.Tipo subunidade",
-              "nativeQueryRef": "Tipo subunidade",
+              "queryRef": "dSubunidades.Grupo",
+              "nativeQueryRef": "Grupo",
               "active": true
             },
             {
@@ -57,21 +57,9 @@
         "levels": [
           {
             "queryRefs": [
-              "Transações.Tipo subunidade"
+              "dSubunidades.Grupo"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Transações"
-                    }
-                  },
-                  "Property": "Tipo subunidade"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
@@ -93,13 +81,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
-                }
-              }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -132,7 +113,7 @@
             "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -146,6 +127,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }
@@ -168,6 +162,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Filtrar por subunidade'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -221,5 +222,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "2960a9009dc6a9dad753"
 }

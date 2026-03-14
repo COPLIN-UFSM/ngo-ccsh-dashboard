@@ -4,10 +4,10 @@
   "position": {
     "x": 170.21276595744681,
     "y": 106.99088145896657,
-    "z": 6000,
+    "z": 1000,
     "height": 89.483282674772042,
     "width": 255.80547112462008,
-    "tabOrder": 4000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,7 +23,7 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Créditos IDR"
+                  "Property": "Crédito IDR Total"
                 }
               },
               "queryRef": "Transações.Créditos IDR",
@@ -42,7 +42,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Créditos IDR"
+                "Property": "Crédito IDR Total"
               }
             },
             "direction": "Descending"

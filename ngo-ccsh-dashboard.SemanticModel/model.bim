@@ -537,17 +537,33 @@
                   }
                 ]
               },
-              "d_finalidade.tipo": {
+              "d_finalidade.modalidade": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "dFinalidades",
-                    "ConceptualProperty": "Tipo"
+                    "ConceptualProperty": "Modalidade"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "tipo": {
+                    "modalidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "d_finalidade.natureza": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "dFinalidades",
+                    "ConceptualProperty": "Natureza"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "natureza": {
                       "State": "Generated"
                     }
                   }
@@ -575,33 +591,33 @@
                   }
                 ]
               },
-              "d_subunidade.classificação": {
+              "d_subunidade.grupo": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "dSubunidades",
-                    "ConceptualProperty": "Classificação"
+                    "ConceptualProperty": "Grupo"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "classificação": {
+                    "grupo": {
                       "State": "Generated"
                     }
                   }
                 ]
               },
-              "d_subunidade.nome": {
+              "d_subunidade.subunidade": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "dSubunidades",
-                    "ConceptualProperty": "Nome"
+                    "ConceptualProperty": "Subunidade"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "nome": {
+                    "subunidade": {
                       "State": "Generated"
                     }
                   }
@@ -622,50 +638,442 @@
                   }
                 ]
               },
-              "transaçõe.créditos_IDR": {
+              "transaçõe.IDR_total": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Créditos IDR"
+                    "ConceptualProperty": "IDR Total"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "créditos IDR": {
+                    "IDR total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "idr aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "idr overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "transaçõe.capital_total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Capital Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "capital total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "capital aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "capital overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "transaçõe.crédito_IDR_capital": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Crédito IDR Capital"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "crédito IDR capital": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "crédito idr wealth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "crédito idr money": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "crédito idr investment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "crédito idr principal": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "crédito idr hub": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "crédito idr center": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  },
+                  {
+                    "crédito idr headquarters": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  }
+                ]
+              },
+              "transaçõe.crédito_IDR_custeio": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Crédito IDR Custeio"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "crédito IDR custeio": {
                       "State": "Generated"
                     }
                   }
                 ]
               },
-              "transaçõe.créditos_totais": {
+              "transaçõe.crédito_IDR_total": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Créditos totais"
+                    "ConceptualProperty": "Crédito IDR Total"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "créditos totais": {
+                    "crédito IDR total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "crédito idr aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "crédito idr overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "Crédito IDR": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "transaçõe.crédito_total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Crédito Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "crédito total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "crédito aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "crédito overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "transaçõe.crédito_transferências_capital": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Crédito Transferências Capital"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "crédito transferências capital": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "crédito transferência wealth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "crédito transferência money": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "crédito transferência investment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "crédito transferência principal": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "crédito transferência hub": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "crédito transferência center": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  },
+                  {
+                    "crédito transferência headquarters": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  }
+                ]
+              },
+              "transaçõe.crédito_transferências_custeio": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Crédito Transferências Custeio"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "crédito transferências custeio": {
                       "State": "Generated"
                     }
                   }
                 ]
               },
-              "transaçõe.créditos_transferências": {
+              "transaçõe.crédito_transferências_total": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Créditos transferências"
+                    "ConceptualProperty": "Crédito Transferências Total"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "créditos transferências": {
+                    "crédito transferências total": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "crédito transferência aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "crédito transferência overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "Crédito Transferências": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "transaçõe.custeio_total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Custeio Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "custeio total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "custeio aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "custeio overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
                     }
                   }
                 ]
@@ -799,6 +1207,42 @@
                   }
                 ]
               },
+              "transaçõe.despesas_total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Despesas Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "despesas total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "despesa aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "despesa overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
               "transaçõe.doc_de_pagamento": {
                 "Definition": {
                   "Binding": {
@@ -813,7 +1257,10 @@
                       "State": "Generated"
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
               "transaçõe.doc_de_solitação": {
                 "Definition": {
@@ -829,68 +1276,339 @@
                       "State": "Generated"
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
-              "transaçõe.débitos_totais": {
+              "transaçõe.débito_despesas_capital": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Débitos totais"
+                    "ConceptualProperty": "Débito Despesas Capital"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "débitos totais": {
+                    "débito despesas capital": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "débito despesa wealth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "débito despesa money": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "débito despesa investment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "débito despesa principal": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "débito despesa hub": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "débito despesa center": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  },
+                  {
+                    "débito despesa headquarters": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débito_despesas_custeio": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débito Despesas Custeio"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débito despesas custeio": {
                       "State": "Generated"
                     }
                   }
                 ]
               },
-              "transaçõe.débitos_totais_a_pagar": {
+              "transaçõe.débito_despesas_total": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Débitos totais a pagar"
+                    "ConceptualProperty": "Débito Despesas Total"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "débitos totais a pagar": {
+                    "débito despesas total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "débito despesa aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "débito despesa overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "Débito Despesas": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débito_total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débito Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débito total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "débito aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "débito overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débito_transferências_capital": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débito Transferências Capital"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débito transferências capital": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "débito transferência wealth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "débito transferência money": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "débito transferência investment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "débito transferência principal": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "débito transferência hub": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "débito transferência center": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  },
+                  {
+                    "débito transferência headquarters": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  }
+                ]
+              },
+              "transaçõe.débito_transferências_custeio": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débito Transferências Custeio"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débito transferências custeio": {
                       "State": "Generated"
                     }
                   }
                 ]
               },
-              "transaçõe.débitos_totais_pagos": {
+              "transaçõe.débito_transferências_total": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Débitos totais pagos"
+                    "ConceptualProperty": "Débito Transferências Total"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "débitos totais pagos": {
+                    "débito transferências total": {
                       "State": "Generated"
                     }
-                  }
-                ]
-              },
-              "transaçõe.débitos_transferências": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Débitos transferências"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
+                  },
                   {
-                    "débitos transferências": {
-                      "State": "Generated"
+                    "débito transferência aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "débito transferência overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "Débito Transferências": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -909,7 +1627,10 @@
                       "State": "Generated"
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
               "transaçõe.empenho_SIE": {
                 "Definition": {
@@ -925,7 +1646,10 @@
                       "State": "Generated"
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
               "transaçõe.finalidade": {
                 "Definition": {
@@ -946,24 +1670,18 @@
                   "Value": "Hidden"
                 }
               },
-              "transaçõe.finalidade_detalhada": {
+              "transaçõe.fluxo": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Finalidade (detalhada)"
+                    "ConceptualProperty": "Fluxo"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "finalidade (detalhada)": {
+                    "fluxo": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "finalidade": {
-                      "State": "Generated",
-                      "Weight": 0.75
                     }
                   }
                 ]
@@ -1001,7 +1719,10 @@
                       "State": "Generated"
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
               "transaçõe.local___trecho": {
                 "Definition": {
@@ -1075,7 +1796,10 @@
                       "Weight": 0.452
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
               "transaçõe.montante": {
                 "Definition": {
@@ -1089,6 +1813,28 @@
                   {
                     "montante": {
                       "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.montante_signed": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Montante (signed)"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "montante (signed)": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "montante": {
+                      "State": "Generated",
+                      "Weight": 0.75
                     }
                   }
                 ]
@@ -1107,7 +1853,10 @@
                       "State": "Generated"
                     }
                   }
-                ]
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
               },
               "transaçõe.quantidade": {
                 "Definition": {
@@ -1120,6 +1869,25 @@
                 "Terms": [
                   {
                     "quantidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "transaçõe.saldo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Saldo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "saldo": {
                       "State": "Generated"
                     }
                   }
@@ -1144,34 +1912,38 @@
                   "Value": "Hidden"
                 }
               },
-              "transaçõe.tipo": {
+              "transaçõe.transferências_total": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Tipo"
+                    "ConceptualProperty": "Transferências Total"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "tipo": {
+                    "transferências total": {
                       "State": "Generated"
                     }
-                  }
-                ]
-              },
-              "transaçõe.tipo_subunidade": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Tipo subunidade"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
+                  },
                   {
-                    "tipo subunidade": {
-                      "State": "Generated"
+                    "transferência aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "transferência overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
                     }
                   }
                 ]
@@ -1641,7 +2413,7 @@
                 },
                 "State": "Generated"
               },
-              "d_finalidade_has_tipo": {
+              "d_finalidade_has_modalidade": {
                 "Binding": {
                   "ConceptualEntity": "dFinalidades"
                 },
@@ -1649,13 +2421,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "d_finalidade.tipo"
+                        "Role": "d_finalidade.modalidade"
                       },
                       "Subject": {
                         "Role": "d_finalidade"
                       }
                     },
-                    "ID": "d_finalidades_have_tipos",
+                    "ID": "d_finalidades_have_modalidades",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -1666,15 +2438,48 @@
                       "Entity": "d_finalidade"
                     }
                   },
-                  "d_finalidade.tipo": {
+                  "d_finalidade.modalidade": {
                     "Target": {
-                      "Entity": "d_finalidade.tipo"
+                      "Entity": "d_finalidade.modalidade"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "d_subunidade_has_classificação": {
+              "d_finalidade_has_natureza": {
+                "Binding": {
+                  "ConceptualEntity": "dFinalidades"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "d_finalidade.natureza"
+                      },
+                      "Subject": {
+                        "Role": "d_finalidade"
+                      }
+                    },
+                    "ID": "d_finalidades_have_naturezas",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "d_finalidade": {
+                    "Target": {
+                      "Entity": "d_finalidade"
+                    }
+                  },
+                  "d_finalidade.natureza": {
+                    "Target": {
+                      "Entity": "d_finalidade.natureza"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "d_subunidade_has_grupo": {
                 "Binding": {
                   "ConceptualEntity": "dSubunidades"
                 },
@@ -1682,13 +2487,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "d_subunidade.classificação"
+                        "Role": "d_subunidade.grupo"
                       },
                       "Subject": {
                         "Role": "d_subunidade"
                       }
                     },
-                    "ID": "d_subunidades_have_classificaçãos",
+                    "ID": "d_subunidades_have_grupos",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -1699,15 +2504,15 @@
                       "Entity": "d_subunidade"
                     }
                   },
-                  "d_subunidade.classificação": {
+                  "d_subunidade.grupo": {
                     "Target": {
-                      "Entity": "d_subunidade.classificação"
+                      "Entity": "d_subunidade.grupo"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "d_subunidade_has_nome": {
+              "d_subunidade_has_subunidade": {
                 "Binding": {
                   "ConceptualEntity": "dSubunidades"
                 },
@@ -1715,13 +2520,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "d_subunidade.nome"
+                        "Role": "d_subunidade.subunidade"
                       },
                       "Subject": {
                         "Role": "d_subunidade"
                       }
                     },
-                    "ID": "d_subunidades_have_nome",
+                    "ID": "d_subunidades_have_subunidades",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -1732,15 +2537,15 @@
                       "Entity": "d_subunidade"
                     }
                   },
-                  "d_subunidade.nome": {
+                  "d_subunidade.subunidade": {
                     "Target": {
-                      "Entity": "d_subunidade.nome"
+                      "Entity": "d_subunidade.subunidade"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_créditos_IDR": {
+              "transaçõe_has_IDR_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -1748,13 +2553,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.créditos_IDR"
+                        "Role": "transaçõe.IDR_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_créditos_IDR",
+                    "ID": "transações_have_IDR_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -1765,15 +2570,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.créditos_IDR": {
+                  "transaçõe.IDR_total": {
                     "Target": {
-                      "Entity": "transaçõe.créditos_IDR"
+                      "Entity": "transaçõe.IDR_total"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_créditos_totais": {
+              "transaçõe_has_capital_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -1781,13 +2586,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.créditos_totais"
+                        "Role": "transaçõe.capital_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_créditos_totais",
+                    "ID": "transações_have_capital_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -1798,15 +2603,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.créditos_totais": {
+                  "transaçõe.capital_total": {
                     "Target": {
-                      "Entity": "transaçõe.créditos_totais"
+                      "Entity": "transaçõe.capital_total"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_créditos_transferências": {
+              "transaçõe_has_crédito_IDR_capital": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -1814,13 +2619,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.créditos_transferências"
+                        "Role": "transaçõe.crédito_IDR_capital"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_créditos_transferências",
+                    "ID": "transações_have_crédito_IDR_capital",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -1831,9 +2636,240 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.créditos_transferências": {
+                  "transaçõe.crédito_IDR_capital": {
                     "Target": {
-                      "Entity": "transaçõe.créditos_transferências"
+                      "Entity": "transaçõe.crédito_IDR_capital"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_crédito_IDR_custeio": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.crédito_IDR_custeio"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_crédito_IDR_custeio",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.crédito_IDR_custeio": {
+                    "Target": {
+                      "Entity": "transaçõe.crédito_IDR_custeio"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_crédito_IDR_total": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.crédito_IDR_total"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_crédito_IDR_total",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.crédito_IDR_total": {
+                    "Target": {
+                      "Entity": "transaçõe.crédito_IDR_total"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_crédito_total": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.crédito_total"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_crédito_total",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.crédito_total": {
+                    "Target": {
+                      "Entity": "transaçõe.crédito_total"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_crédito_transferências_capital": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.crédito_transferências_capital"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_crédito_transferências_capital",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.crédito_transferências_capital": {
+                    "Target": {
+                      "Entity": "transaçõe.crédito_transferências_capital"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_crédito_transferências_custeio": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.crédito_transferências_custeio"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_crédito_transferências_custeio",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.crédito_transferências_custeio": {
+                    "Target": {
+                      "Entity": "transaçõe.crédito_transferências_custeio"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_crédito_transferências_total": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.crédito_transferências_total"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_crédito_transferências_total",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.crédito_transferências_total": {
+                    "Target": {
+                      "Entity": "transaçõe.crédito_transferências_total"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_custeio_total": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.custeio_total"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_custeio_total",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.custeio_total": {
+                    "Target": {
+                      "Entity": "transaçõe.custeio_total"
                     }
                   }
                 },
@@ -2050,7 +3086,7 @@
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_doc_de_pagamento": {
+              "transaçõe_has_despesas_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2058,13 +3094,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.doc_de_pagamento"
+                        "Role": "transaçõe.despesas_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_doc_de_pagamentos",
+                    "ID": "transações_have_despesas_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2075,15 +3111,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.doc_de_pagamento": {
+                  "transaçõe.despesas_total": {
                     "Target": {
-                      "Entity": "transaçõe.doc_de_pagamento"
+                      "Entity": "transaçõe.despesas_total"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_doc_de_solitação": {
+              "transaçõe_has_débito_despesas_capital": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2091,13 +3127,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.doc_de_solitação"
+                        "Role": "transaçõe.débito_despesas_capital"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_doc_de_solitaçãos",
+                    "ID": "transações_have_débito_despesas_capital",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2108,15 +3144,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.doc_de_solitação": {
+                  "transaçõe.débito_despesas_capital": {
                     "Target": {
-                      "Entity": "transaçõe.doc_de_solitação"
+                      "Entity": "transaçõe.débito_despesas_capital"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_débitos_totais": {
+              "transaçõe_has_débito_despesas_custeio": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2124,13 +3160,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.débitos_totais"
+                        "Role": "transaçõe.débito_despesas_custeio"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_débitos_totais",
+                    "ID": "transações_have_débito_despesas_custeio",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2141,15 +3177,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.débitos_totais": {
+                  "transaçõe.débito_despesas_custeio": {
                     "Target": {
-                      "Entity": "transaçõe.débitos_totais"
+                      "Entity": "transaçõe.débito_despesas_custeio"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_débitos_totais_a_pagar": {
+              "transaçõe_has_débito_despesas_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2157,13 +3193,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.débitos_totais_a_pagar"
+                        "Role": "transaçõe.débito_despesas_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_débitos_totais_a_pagar",
+                    "ID": "transações_have_débito_despesas_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2174,15 +3210,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.débitos_totais_a_pagar": {
+                  "transaçõe.débito_despesas_total": {
                     "Target": {
-                      "Entity": "transaçõe.débitos_totais_a_pagar"
+                      "Entity": "transaçõe.débito_despesas_total"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_débitos_totais_pagos": {
+              "transaçõe_has_débito_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2190,13 +3226,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.débitos_totais_pagos"
+                        "Role": "transaçõe.débito_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_débitos_totais_pagos",
+                    "ID": "transações_have_débito_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2207,15 +3243,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.débitos_totais_pagos": {
+                  "transaçõe.débito_total": {
                     "Target": {
-                      "Entity": "transaçõe.débitos_totais_pagos"
+                      "Entity": "transaçõe.débito_total"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_débitos_transferências": {
+              "transaçõe_has_débito_transferências_capital": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2223,13 +3259,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.débitos_transferências"
+                        "Role": "transaçõe.débito_transferências_capital"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_débitos_transferências",
+                    "ID": "transações_have_débito_transferências_capital",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2240,15 +3276,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.débitos_transferências": {
+                  "transaçõe.débito_transferências_capital": {
                     "Target": {
-                      "Entity": "transaçõe.débitos_transferências"
+                      "Entity": "transaçõe.débito_transferências_capital"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_empenho_SIAFI": {
+              "transaçõe_has_débito_transferências_custeio": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2256,13 +3292,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.empenho_SIAFI"
+                        "Role": "transaçõe.débito_transferências_custeio"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_empenho_SIAFIs",
+                    "ID": "transações_have_débito_transferências_custeio",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2273,15 +3309,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.empenho_SIAFI": {
+                  "transaçõe.débito_transferências_custeio": {
                     "Target": {
-                      "Entity": "transaçõe.empenho_SIAFI"
+                      "Entity": "transaçõe.débito_transferências_custeio"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_empenho_SIE": {
+              "transaçõe_has_débito_transferências_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2289,13 +3325,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.empenho_SIE"
+                        "Role": "transaçõe.débito_transferências_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_empenho_SIEs",
+                    "ID": "transações_have_débito_transferências_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2306,15 +3342,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.empenho_SIE": {
+                  "transaçõe.débito_transferências_total": {
                     "Target": {
-                      "Entity": "transaçõe.empenho_SIE"
+                      "Entity": "transaçõe.débito_transferências_total"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_finalidade_detalhada": {
+              "transaçõe_has_fluxo": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2322,13 +3358,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.finalidade_detalhada"
+                        "Role": "transaçõe.fluxo"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_finalidade_detalhada",
+                    "ID": "transações_have_fluxos",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2339,75 +3375,9 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.finalidade_detalhada": {
+                  "transaçõe.fluxo": {
                     "Target": {
-                      "Entity": "transaçõe.finalidade_detalhada"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "transaçõe_has_lista_SIAFI": {
-                "Binding": {
-                  "ConceptualEntity": "Transações"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "transaçõe.lista_SIAFI"
-                      },
-                      "Subject": {
-                        "Role": "transaçõe"
-                      }
-                    },
-                    "ID": "transações_have_lista_SIAFIs",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "transaçõe": {
-                    "Target": {
-                      "Entity": "transaçõe"
-                    }
-                  },
-                  "transaçõe.lista_SIAFI": {
-                    "Target": {
-                      "Entity": "transaçõe.lista_SIAFI"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "transaçõe_has_local___trecho": {
-                "Binding": {
-                  "ConceptualEntity": "Transações"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "transaçõe.local___trecho"
-                      },
-                      "Subject": {
-                        "Role": "transaçõe"
-                      }
-                    },
-                    "ID": "transações_have_local___trechos",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "transaçõe": {
-                    "Target": {
-                      "Entity": "transaçõe"
-                    }
-                  },
-                  "transaçõe.local___trecho": {
-                    "Target": {
-                      "Entity": "transaçõe.local___trecho"
+                      "Entity": "transaçõe.fluxo"
                     }
                   }
                 },
@@ -2473,7 +3443,7 @@
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_pago": {
+              "transaçõe_has_montante_signed": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2481,13 +3451,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.pago"
+                        "Role": "transaçõe.montante_signed"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_pago",
+                    "ID": "transações_have_montante_signed",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2498,15 +3468,15 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.pago": {
+                  "transaçõe.montante_signed": {
                     "Target": {
-                      "Entity": "transaçõe.pago"
+                      "Entity": "transaçõe.montante_signed"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_pendência": {
+              "transaçõe_has_saldo": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2514,45 +3484,32 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "pendência"
+                        "Role": "transaçõe.saldo"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_pendências",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  },
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "transaçõe"
-                      },
-                      "Subject": {
-                        "Role": "pendência"
-                      }
-                    },
-                    "ID": "pendências_have_transações",
+                    "ID": "transações_have_saldo",
                     "State": "Generated",
                     "Weight": 0.99
                   }
                 ],
                 "Roles": {
-                  "pendência": {
-                    "Target": {
-                      "Entity": "pendência"
-                    }
-                  },
                   "transaçõe": {
                     "Target": {
                       "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.saldo": {
+                    "Target": {
+                      "Entity": "transaçõe.saldo"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_quantidade": {
+              "transaçõe_has_transferências_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -2560,13 +3517,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.quantidade"
+                        "Role": "transaçõe.transferências_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_quantidades",
+                    "ID": "transações_have_transferências_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -2577,75 +3534,9 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.quantidade": {
+                  "transaçõe.transferências_total": {
                     "Target": {
-                      "Entity": "transaçõe.quantidade"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "transaçõe_has_tipo": {
-                "Binding": {
-                  "ConceptualEntity": "Transações"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "transaçõe.tipo"
-                      },
-                      "Subject": {
-                        "Role": "transaçõe"
-                      }
-                    },
-                    "ID": "transações_have_tipos",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "transaçõe": {
-                    "Target": {
-                      "Entity": "transaçõe"
-                    }
-                  },
-                  "transaçõe.tipo": {
-                    "Target": {
-                      "Entity": "transaçõe.tipo"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "transaçõe_has_tipo_subunidade": {
-                "Binding": {
-                  "ConceptualEntity": "Transações"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "transaçõe.tipo_subunidade"
-                      },
-                      "Subject": {
-                        "Role": "transaçõe"
-                      }
-                    },
-                    "ID": "transações_have_tipo_subunidades",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "transaçõe": {
-                    "Target": {
-                      "Entity": "transaçõe"
-                    }
-                  },
-                  "transaçõe.tipo_subunidade": {
-                    "Target": {
-                      "Entity": "transaçõe.tipo_subunidade"
+                      "Entity": "transaçõe.transferências_total"
                     }
                   }
                 },
@@ -2719,13 +3610,6 @@
         "toTable": "dFinalidades"
       },
       {
-        "name": "279993c4-edb6-e01a-a466-ccab8159ca87",
-        "fromColumn": "Subunidade",
-        "fromTable": "Transações",
-        "toColumn": "Nome",
-        "toTable": "dSubunidades"
-      },
-      {
         "name": "3ba87e23-4898-4399-8977-80c5641e341c",
         "fromColumn": "Date",
         "fromTable": "dCalendario",
@@ -2739,6 +3623,13 @@
         "fromTable": "Transações",
         "toColumn": "Date",
         "toTable": "dCalendario"
+      },
+      {
+        "name": "AutoDetected_db8a1892-c11f-4017-98f9-fa7bc80c03e8",
+        "fromColumn": "Subunidade",
+        "fromTable": "Transações",
+        "toColumn": "Subunidade",
+        "toTable": "dSubunidades"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -2764,8 +3655,14 @@
                 "value": "User"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "108fec05-e8a9-45fb-bd50-edcb41047ff9",
             "sourceColumn": "Linha",
             "summarizeBy": "none"
@@ -2834,45 +3731,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Tipo",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "430762df-2eac-422c-9771-6a7113145487",
-            "sourceColumn": "Tipo",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Finalidade (detalhada)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "f331fc9c-896b-4104-a22d-17b2dd524ee4",
-            "sourceColumn": "Finalidade (detalhada)",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Tipo subunidade",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "67ecea68-60cd-40c9-86ee-7d90ed15de34",
-            "sourceColumn": "Tipo subunidade",
-            "summarizeBy": "none"
-          },
-          {
             "name": "Pago",
             "annotations": [
               {
@@ -2880,8 +3738,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "boolean",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isHidden": true,
             "lineageTag": "2d0c5d08-2d15-4c43-8ce5-83e2a41bab4b",
             "sourceColumn": "Pago",
             "summarizeBy": "none"
@@ -2894,7 +3758,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "cc619a9f-ca9f-4fc9-a35a-623adfc355f0",
             "sourceColumn": "Doc de Solitação",
             "summarizeBy": "none"
@@ -2907,7 +3777,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "5e0db7aa-dbe8-4ddf-9fed-0d83cc0848b8",
             "sourceColumn": "Doc de Pagamento",
             "summarizeBy": "none"
@@ -2920,7 +3796,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "28700cbc-4a9e-4dc7-b318-761934029d6c",
             "sourceColumn": "Lista SIAFI",
             "summarizeBy": "none"
@@ -2933,7 +3815,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "9f887121-315d-428a-a865-fba381d28034",
             "sourceColumn": "Empenho SIE",
             "summarizeBy": "none"
@@ -2946,7 +3834,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "8a789568-1796-4f9e-ad86-65a2a5a85c6e",
             "sourceColumn": "Empenho SIAFI",
             "summarizeBy": "none"
@@ -2959,7 +3853,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "3f7bc5ee-6ed4-4b54-bdbc-c1b08bb5b1da",
             "sourceColumn": "Local / Trecho",
             "summarizeBy": "none"
@@ -2972,7 +3872,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "7ce7d165-8b79-486c-94ce-a8e90d75b6e0",
             "sourceColumn": "Quantidade",
             "summarizeBy": "none"
@@ -2989,12 +3895,42 @@
             "lineageTag": "8dc882b5-8b49-4416-a789-29887ebcda29",
             "sourceColumn": "Descrição + Beneficiário",
             "summarizeBy": "none"
+          },
+          {
+            "name": "Fluxo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0dde17fc-8859-4ab2-ad8f-5278099ec0c7",
+            "sourceColumn": "Fluxo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Montante (signed)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4bd00013-8489-42b4-961d-cf75a1a42f5b",
+            "sourceColumn": "Montante (signed)",
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "d4a51c54-a899-4bbd-9d9b-358e6d75fa7f",
         "measures": [
           {
-            "name": "Débitos totais",
+            "name": "Débito Total",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
@@ -3004,14 +3940,14 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Tipo] = \"Débito\"",
+              "    'Transações'[Fluxo] = \"Débito\"",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "1bbf3f09-a786-48cd-a867-ffe7073d7b57"
           },
           {
-            "name": "Créditos totais",
+            "name": "Crédito Total",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
@@ -3021,14 +3957,14 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Tipo] = \"Crédito\"",
+              "    'Transações'[Fluxo] = \"Crédito\"",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "9366692b-92ee-4e1b-9e7f-9eb20972b685"
           },
           {
-            "name": "Créditos IDR",
+            "name": "Crédito IDR Total",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
@@ -3038,38 +3974,15 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Tipo] = \"Crédito\",",
-              "    FILTER(",
-              "        'Transações',",
-              "        'Transações'[Finalidade] = \"IDR - Custeio\" || 'Transações'[Finalidade] = \"IDR - Capital\"",
-              "    )",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    dFinalidades[Modalidade] = \"IDR\"",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "63e86dae-bb4e-4cd2-8dd8-8de48d5d01a3"
           },
           {
-            "name": "Créditos transferências",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "expression": [
-              "CALCULATE(",
-              "    SUM('Transações'[Montante]),",
-              "    'Transações'[Tipo] = \"Crédito\",",
-              "    FILTER(",
-              "        'Transações',",
-              "        ('Transações'[Finalidade] = \"Transferência - Custeio\") || ('Transações'[Finalidade] = \"Transferência - Capital\")",
-              "    )",
-              ")"
-            ],
-            "lineageTag": "ca34cedf-04ae-4757-9391-c42bb7569342"
-          },
-          {
-            "name": "Débitos transferências",
+            "name": "Crédito Transferências Total",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
@@ -3079,46 +3992,232 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Tipo] = \"Débito\",",
-              "    ('Transações'[Finalidade] = \"Transferência - Custeio\") || ('Transações'[Finalidade] = \"Transferência - Capital\")",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    dFinalidades[Modalidade] = \"Transferência\"",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "ca34cedf-04ae-4757-9391-c42bb7569342"
+          },
+          {
+            "name": "Débito Despesas Custeio",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Modalidade] = \"Despesas\",",
+              "    'dFinalidades'[Natureza] = \"Custeio\"",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "cb9f292d-9ea0-4b74-81ce-8b520f2d3843"
           },
           {
-            "name": "Débitos totais a pagar",
+            "name": "Débito Despesas Total",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
               }
             ],
             "expression": [
+              "",
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Tipo] = \"Débito\",",
-              "    'Transações'[Pago] = FALSE",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Modalidade] = \"Despesas\"",
               ")"
             ],
-            "lineageTag": "ac25965d-99fe-4798-935f-56b964296bf6"
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "cf019427-aef0-42e9-99df-5bef567841e0"
           },
           {
-            "name": "Débitos totais pagos",
+            "name": "Crédito IDR Custeio",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    'dFinalidades'[Natureza] = \"Custeio\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "669762f8-5448-4ffe-ae0b-f192aed56da6"
+          },
+          {
+            "name": "Crédito IDR Capital",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    'dFinalidades'[Natureza] = \"Capital\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "799dd489-0387-4a5d-acf3-de3fe5bd3891"
+          },
+          {
+            "name": "Crédito Transferências Custeio",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    dFinalidades[Modalidade] = \"Transferência\",",
+              "    dFinalidades[Natureza] = \"Custeio\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "825bd2d1-9909-47db-8f1e-dc4c022df8e6"
+          },
+          {
+            "name": "Crédito Transferências Capital",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    dFinalidades[Modalidade] = \"Transferência\",",
+              "    dFinalidades[Natureza] = \"Capital\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "e2a12f02-8025-4b0f-963f-7daa7b903545"
+          },
+          {
+            "name": "Débito Despesas Capital",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Modalidade] = \"Despesas\",",
+              "    'dFinalidades'[Natureza] = \"Capital\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "5557e151-bb71-49f3-be80-5cf33764509a"
+          },
+          {
+            "name": "Débito Transferências Total",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
               }
             ],
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Tipo] = \"Débito\",",
-              "    'Transações'[Pago] = TRUE",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Modalidade] = \"Transferência\"",
               ")"
             ],
-            "lineageTag": "dbdeebfa-2935-4423-b61a-ca3f29f34d1e"
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "c94ac4c6-9f6a-48f0-84f8-16718b402f48"
+          },
+          {
+            "name": "Débito Transferências Custeio",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Modalidade] = \"Transferência\",",
+              "    dFinalidades[Natureza] = \"Custeio\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "503c7a9e-f813-4cf1-ae4c-b75a0dbda45f"
+          },
+          {
+            "name": "Débito Transferências Capital",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Modalidade] = \"Transferência\",",
+              "    dFinalidades[Natureza] = \"Capital\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "d56d2eaf-154a-46b7-b917-151591fed5a1"
+          },
+          {
+            "name": "Transferências Total",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'dFinalidades'[Modalidade] = \"Transferência\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "cd985786-c3c0-4cc4-bd5b-d04e6aaaa2e9"
+          },
+          {
+            "name": "Despesas Total",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'dFinalidades'[Modalidade] = \"Despesas\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "caf001cb-15e6-4f41-8dba-4d6b0f5972d4"
+          },
+          {
+            "name": "IDR Total",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'dFinalidades'[Modalidade] = \"IDR\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "cb8fdb50-d85e-43ab-a67f-f3a420318a5d"
+          },
+          {
+            "name": "Custeio Total",
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'dFinalidades'[Natureza] = \"Custeio\"",
+              ")"
+            ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "0b1d04df-671b-454d-8e07-e9ab4edeee98"
+          },
+          {
+            "name": "Capital Total",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'dFinalidades'[Natureza] = \"Capital\"",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "bd633c5c-2621-40cd-866c-c2fe878a46c6"
+          },
+          {
+            "name": "Saldo",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "[Crédito Total] - [Débito Total]",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "6fcdcbc0-213a-496e-b1aa-2ea66ea1e4fb"
           }
         ],
         "partitions": [
@@ -3131,7 +4230,7 @@
                 "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1_Xtx0snoLOuKp9DWR1D9C6kG4rZpVVOQyo8zCd1N5fY/edit?usp=sharing\"),",
                 "    NS2_Table = Source{[name=\"NS2\",ItemKind=\"Table\"]}[Data],",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(NS2_Table, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Linha\", Int64.Type}, {\"Data Lançamento\", type date}, {\"Montante (R$)\", type number}, {\"Subunidade\", type text}, {\"Finalidade\", type text}, {\"Tipo\", type text}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Linha\", Int64.Type}, {\"Data Lançamento\", type date}, {\"Montante (R$)\", type number}, {\"Subunidade\", type text}, {\"Finalidade\", type text}, {\"Fluxo\", type text}}),",
                 "    #\"Removed Blank Rows\" = Table.SelectRows(#\"Changed Type\", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {\"\", null}))),",
                 "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Removed Blank Rows\",{{\"Data Lançamento\", type datetime}}),",
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type1\",{{\"Montante (R$)\", \"Montante (signed)\"}}),",
@@ -3139,11 +4238,16 @@
                 "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"não\",\"False\",Replacer.ReplaceText,{\"Pago\"}),",
                 "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value1\",{{\"Pago\", type logical}}),",
                 "    #\"Merged Columns\" = Table.CombineColumns(#\"Changed Type2\",{\"Descrição\", \"Nome / Beneficiário / Setor\"},Combiner.CombineTextByDelimiter(\". \", QuoteStyle.None),\"Descrição + Beneficiário\"),",
-                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Merged Columns\",{\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Finalidade (detalhada)\", \"Pago\", \"Tipo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Merged Columns\",{\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade (Grupo)\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
                 "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns\",{{\"Montante (signed)\", \"Montante\"}}),",
-                "    #\"Calculated Absolute Value\" = Table.TransformColumns(#\"Renamed Columns1\",{{\"Montante\", Number.Abs, type number}})",
+                "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Renamed Columns1\", \"Montante\", \"Montante - Copy\"),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Duplicated Column\",{{\"Montante - Copy\", \"Montante (signed)\"}}),",
+                "    #\"Reordered Columns1\" = Table.ReorderColumns(#\"Renamed Columns2\",{\"Linha\", \"Data Lançamento\", \"Montante\", \"Montante (signed)\", ",
+                "\"Subunidade\", \"Tipo subunidade\", \"Finalidade (Grupo)\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
+                "    #\"Calculated Absolute Value\" = Table.TransformColumns(#\"Reordered Columns1\",{{\"Montante\", Number.Abs, type number}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Calculated Absolute Value\",{\"Finalidade (Grupo)\", \"Tipo subunidade\"})",
                 "in",
-                "    #\"Calculated Absolute Value\""
+                "    #\"Removed Columns\""
               ],
               "type": "m"
             }
@@ -3177,7 +4281,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Tipo",
+            "name": "Modalidade",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -3185,8 +4289,21 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "2c13ec9a-b26c-42d0-9d9e-56716e00b376",
-            "sourceColumn": "Tipo",
+            "lineageTag": "42a17c2e-8d62-464e-897d-f09fec477c95",
+            "sourceColumn": "Modalidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Natureza",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b7b6d759-27dc-41a7-a195-254f99023ca1",
+            "sourceColumn": "Natureza",
             "summarizeBy": "none"
           }
         ],
@@ -3200,9 +4317,10 @@
                 "let",
                 "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1_Xtx0snoLOuKp9DWR1D9C6kG4rZpVVOQyo8zCd1N5fY/edit?usp=sharing\"),",
                 "    #\"lista - tipos de finalidades_Table\" = Source{[name=\"lista - tipos de finalidades\",ItemKind=\"Table\"]}[Data],",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"lista - tipos de finalidades_Table\", [PromoteAllScalars=true])",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"lista - tipos de finalidades_Table\", [PromoteAllScalars=true]),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Promoted Headers\",{\"Finalidade (Grupo)\"})",
                 "in",
-                "    #\"Promoted Headers\""
+                "    #\"Removed Columns\""
               ],
               "type": "m"
             }
@@ -3223,7 +4341,7 @@
         ],
         "columns": [
           {
-            "name": "Nome",
+            "name": "Subunidade",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -3231,12 +4349,12 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "092c91eb-ed01-47cc-849c-933c1ff35cc3",
-            "sourceColumn": "Nome",
+            "lineageTag": "1114fb70-babe-4e3c-aee3-054ddbf41206",
+            "sourceColumn": "Subunidade",
             "summarizeBy": "none"
           },
           {
-            "name": "Classificação",
+            "name": "Grupo",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -3244,8 +4362,8 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "04f8947a-1940-4941-b5a6-4b66a5300d5d",
-            "sourceColumn": "Classificação",
+            "lineageTag": "bcc2ccdb-949c-4e4e-880a-50741a4961f2",
+            "sourceColumn": "Grupo",
             "summarizeBy": "none"
           }
         ],
@@ -3260,7 +4378,7 @@
                 "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1_Xtx0snoLOuKp9DWR1D9C6kG4rZpVVOQyo8zCd1N5fY/edit?usp=sharing\"),",
                 "    #\"lista - subunidades_Table\" = Source{[name=\"lista - subunidades\",ItemKind=\"Table\"]}[Data],",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"lista - subunidades_Table\", [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Nome\", type text}, {\"Classificação\", type text}})",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Subunidade\", type text}, {\"Grupo\", type text}})",
                 "in",
                 "    #\"Changed Type\""
               ],
