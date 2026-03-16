@@ -180,7 +180,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Percentual executado'"
+                  "Value": "'Executado'"
                 }
               }
             }

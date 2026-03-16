@@ -67,6 +67,28 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Transações"
+                      }
+                    },
+                    "Property": "Montante (signed)"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -76,7 +98,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "870.9277706796188D"
+                  "Value": "849.4690075443165D"
                 }
               }
             }

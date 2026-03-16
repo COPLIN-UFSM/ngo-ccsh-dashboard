@@ -3918,10 +3918,11 @@
               },
               {
                 "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
               }
             ],
             "dataType": "double",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "4bd00013-8489-42b4-961d-cf75a1a42f5b",
             "sourceColumn": "Montante (signed)",
             "summarizeBy": "sum"

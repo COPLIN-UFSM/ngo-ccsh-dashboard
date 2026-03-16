@@ -5,6 +5,11 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
+  "pageBinding": {
+    "name": "5a1c43724de2469dee8d",
+    "type": "Default",
+    "parameters": []
+  },
   "objects": {
     "background": [
       {

@@ -32,11 +32,77 @@
 <body>
 
 <!-- Power BI Iframe ocupa a tela inteira -->
-<iframe 
-    title="ngo-ccsh-dashboard" 
-    src="https://app.powerbi.com/view?r=eyJrIjoiOTk0NDg0OWEtMWYzZS00ODVmLTgxZDAtYmE2YTVjMzdjODY2IiwidCI6Ijk3OTAyMGQ1LTQ5NTAtNGY0My1hOTk0LTg4ZDY4M2VhYjQ3MyJ9" 
+<iframe
+    id="dashboard"
+    title="ngo-ccsh-dashboard"
+    src="https://app.powerbi.com/view?r=eyJrIjoiOTk0NDg0OWEtMWYzZS00ODVmLTgxZDAtYmE2YTVjMzdjODY2IiwidCI6Ijk3OTAyMGQ1LTQ5NTAtNGY0My1hOTk0LTg4ZDY4M2VhYjQ3MyJ9"
     allowFullScreen="true">
 </iframe>
+
+<!-- Seção de conteúdo que será exibida ao rolar a página -->
+<main class="container content-section">
+    <h1 id="ajuda">Ajuda</h1>
+
+    <h2 id="sumario">Sumário</h2>
+    <ol>
+        <li><a href="#filtros">Usando filtros</a></li>
+        <li><a href="#reportando_erros">Reportando erros</a></li>
+        <li><a href="#dashboard">Voltar para o painel</a></li>
+    </ol>
+
+    <h2 id="filtros">Usando filtros</h2>
+
+    <p>Clique nos títulos abaixo para obter ajuda para cada uma das funcionalidades do painel:</p>
+
+    <details>
+        <summary><strong>Selecionando apenas um valor</strong></summary>
+        <p>
+            No filtro, as subunidades estão agrupadas por classificação. Para selecionar uma subunidade em particular,
+            abra o grupo e clique na caixa de seleção da subunidade desejada:
+        </p>
+
+        <img alt="animação mostrando como selecionar um valor de um filtro" src="images/filtrar_subunidade.gif">
+
+        <a href="#sumario" style="text-decoration: none">⬆️ Voltar ao topo</a>
+    </details>
+
+    <details>
+        <summary><strong>Selecionando múltiplos valores</strong></summary>
+
+        <p>
+            Para selecionar mais de uma categoria em um filtro, segure a tecla <pre>CTRL</pre>
+            (no teclado, localizada no canto inferior esquerdo) e clique nas categorias desejadas:</p>
+
+        <img
+            alt="animação mostrando como selecionar vários valores em um filtro"
+            src="images/filtro_seleção_múltipla.gif"
+        >
+
+        <a href="#sumario" style="text-decoration: none">⬆️ Voltar ao topo</a>
+    </details>
+
+    <details>
+        <summary><strong>Limpando filtros</strong></summary>
+        <p>Para limpar os filtros, clique no botão <strong>Limpar filtros</strong>:</p>
+
+        <img alt="animação mostrando como limpar os filtros" src="images/limpar_filtros.gif">
+
+        <a href="#sumario" style="text-decoration: none">⬆️ Voltar ao topo</a>
+    </details>
+
+    <a href="#sumario" style="text-decoration: none">⬆️ Voltar ao topo</a>
+
+    <h2 id="reportando_erros">Reportando erros</h2>
+    <p>Achou uma informação que não condiz com a realidade? Erros acontecem!</p>
+    <p>Entre em contato com a equipe do Núcleo de Gestão Orçamentária do CCSH no e-mail
+        <a href="orcamento.ccsh@ufsm.br">orcamento.ccsh@ufsm.br</a> com o assunto "Erro no Dashboard de Controle
+        Orçamentário" e descreva o problema. Se possível, anexe uma captura de tela do erro para facilitar a
+        identificação do problema.
+    </p>
+
+    <a href="#sumario" style="text-decoration: none">⬆️ Voltar ao topo</a>
+
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

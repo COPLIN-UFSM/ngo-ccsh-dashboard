@@ -43,7 +43,7 @@
               },
               "queryRef": "Transações.Subunidade",
               "nativeQueryRef": "Subunidade",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -60,6 +60,18 @@
               "dSubunidades.Grupo"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dSubunidades"
+                    }
+                  },
+                  "Property": "Grupo"
+                }
+              }
+            ],
             "isPinned": true
           },
           {
@@ -70,7 +82,20 @@
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Departamentos'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {

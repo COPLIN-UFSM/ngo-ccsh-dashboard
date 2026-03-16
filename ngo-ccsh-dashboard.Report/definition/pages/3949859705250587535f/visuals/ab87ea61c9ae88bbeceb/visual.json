@@ -60,6 +60,18 @@
               "dSubunidades.Grupo"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dSubunidades"
+                    }
+                  },
+                  "Property": "Grupo"
+                }
+              }
+            ],
             "isPinned": true
           },
           {

@@ -4,10 +4,10 @@
   "position": {
     "x": 1010,
     "y": 102,
-    "z": 4001,
+    "z": 5000,
     "height": 186,
     "width": 250,
-    "tabOrder": 13001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "gauge",
@@ -41,11 +41,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Débito Total"
+                  "Property": "Saldo"
                 }
               },
-              "queryRef": "Transações.Débitos totais",
-              "nativeQueryRef": "Débitos totais"
+              "queryRef": "Transações.Saldo",
+              "nativeQueryRef": "Saldo"
             }
           ]
         }
@@ -60,7 +60,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Débito Total"
+                "Property": "Saldo"
               }
             },
             "direction": "Descending"
@@ -90,6 +90,13 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -180,7 +187,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Percentual executado'"
+                  "Value": "'Saldo'"
                 }
               }
             }
