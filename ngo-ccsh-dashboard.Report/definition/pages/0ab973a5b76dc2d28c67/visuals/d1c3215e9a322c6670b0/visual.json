@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "0ebfd4cb92ba8d205049",
+  "name": "d1c3215e9a322c6670b0",
   "position": {
-    "x": 117.41195741195742,
-    "y": 119.50859950859952,
-    "z": 2000,
-    "height": 189.74610974610977,
-    "width": 192.89107289107289,
-    "tabOrder": 1000
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 720.0613967766692,
+    "width": 1280,
+    "tabOrder": 7001
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'UFSM_principal_cor.png'"
+                      "Value": "'biblioteca_ccsh.jpg'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "UFSM_principal_cor7553826955928793.png"
+                      "ItemName": "biblioteca_ccsh6449905037512423.jpg"
                     }
                   }
                 },
@@ -39,6 +39,20 @@
                       "Value": "'Normal'"
                     }
                   }
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
                 }
               }
             }
@@ -53,7 +67,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ufsm logo'"
+                  "Value": "'background image'"
                 }
               }
             }
@@ -62,5 +76,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "b3cc5c006d2e1016351d"
 }

@@ -90,23 +90,14 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'biblioteca_ccsh.jpg'"
+                    "Value": "''"
                   }
                 }
               },
               "url": {
                 "expr": {
-                  "ResourcePackageItem": {
-                    "PackageName": "RegisteredResources",
-                    "PackageType": 1,
-                    "ItemName": "biblioteca_ccsh9943017197937647.jpg"
-                  }
-                }
-              },
-              "scaling": {
-                "expr": {
                   "Literal": {
-                    "Value": "'Normal'"
+                    "Value": "''"
                   }
                 }
               }

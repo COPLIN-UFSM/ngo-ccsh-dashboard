@@ -10,27 +10,9 @@
     "tabOrder": 4000
   },
   "visual": {
-    "visualType": "gauge",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
-        "MaxValue": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Transações"
-                    }
-                  },
-                  "Property": "Crédito Total"
-                }
-              },
-              "queryRef": "Transações.Créditos totais",
-              "nativeQueryRef": "Créditos totais"
-            }
-          ]
-        },
         "Y": {
           "projections": [
             {
@@ -44,8 +26,24 @@
                   "Property": "Débito Total"
                 }
               },
-              "queryRef": "Transações.Débitos totais",
-              "nativeQueryRef": "Débitos totais"
+              "queryRef": "Transações.Débito Total",
+              "nativeQueryRef": "Executado",
+              "displayName": "Executado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Saldo Total"
+                }
+              },
+              "queryRef": "Transações.Saldo Total",
+              "nativeQueryRef": "Saldo",
+              "displayName": "Saldo"
             }
           ]
         }
@@ -70,19 +68,6 @@
       }
     },
     "objects": {
-      "target": [
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
@@ -92,17 +77,25 @@
                   "Value": "1D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "calloutValue": [
-        {
-          "properties": {
-            "labelDisplayUnits": {
+            },
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "'preferOutside'"
+                }
+              }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -121,6 +114,83 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Transações.Débito Total"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#CCCCCC'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Transações.Saldo Total"
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "slices": [
+        {
+          "properties": {
+            "startAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -180,7 +250,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Executado'"
+                  "Value": "'Saldo'"
                 }
               }
             }

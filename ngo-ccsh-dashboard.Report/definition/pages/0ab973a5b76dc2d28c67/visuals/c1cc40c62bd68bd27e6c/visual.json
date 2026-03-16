@@ -4,7 +4,7 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 2000,
+    "z": 3000,
     "height": 111.38373751783168,
     "width": 1280,
     "tabOrder": 2000
@@ -79,7 +79,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "40D"
                 }
               }
             }
@@ -160,5 +160,6 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "b3cc5c006d2e1016351d",
   "howCreated": "InsertVisualButton"
 }

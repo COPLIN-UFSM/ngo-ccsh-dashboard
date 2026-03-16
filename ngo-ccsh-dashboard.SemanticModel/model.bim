@@ -1462,6 +1462,16 @@
                       "Type": "Noun",
                       "Weight": 0.727
                     }
+                  },
+                  {
+                    "Executado": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -1650,6 +1660,58 @@
                 "Visibility": {
                   "Value": "Hidden"
                 }
+              },
+              "transaçõe.executado_IDR": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Executado IDR"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "executado IDR": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "transaçõe.executado_total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Executado Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "executado total": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "executado aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "executado overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
               },
               "transaçõe.finalidade": {
                 "Definition": {
@@ -1877,7 +1939,7 @@
                   "Value": "Hidden"
                 }
               },
-              "transaçõe.saldo": {
+              "transaçõe.saldo_total": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
@@ -1887,8 +1949,38 @@
                 "State": "Generated",
                 "Terms": [
                   {
-                    "saldo": {
+                    "saldo total": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "saldo aggregate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "saldo overall": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "Saldo": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -3350,6 +3442,72 @@
                 },
                 "State": "Generated"
               },
+              "transaçõe_has_executado_IDR": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.executado_IDR"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_executado_IDR",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.executado_IDR": {
+                    "Target": {
+                      "Entity": "transaçõe.executado_IDR"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_executado_total": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.executado_total"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_executado_total",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.executado_total": {
+                    "Target": {
+                      "Entity": "transaçõe.executado_total"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "transaçõe_has_fluxo": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
@@ -3460,6 +3618,33 @@
                     "ID": "transações_have_montante_signed",
                     "State": "Generated",
                     "Weight": 0.99
+                  },
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "transaçõe.montante_signed"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "montante_signed_indicates_how_expensive_transações_are",
+                    "State": "Generated",
+                    "Weight": 0.99
                   }
                 ],
                 "Roles": {
@@ -3476,7 +3661,7 @@
                 },
                 "State": "Generated"
               },
-              "transaçõe_has_saldo": {
+              "transaçõe_has_saldo_total": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
                 },
@@ -3484,13 +3669,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "transaçõe.saldo"
+                        "Role": "transaçõe.saldo_total"
                       },
                       "Subject": {
                         "Role": "transaçõe"
                       }
                     },
-                    "ID": "transações_have_saldo",
+                    "ID": "transações_have_saldo_total",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -3501,9 +3686,9 @@
                       "Entity": "transaçõe"
                     }
                   },
-                  "transaçõe.saldo": {
+                  "transaçõe.saldo_total": {
                     "Target": {
-                      "Entity": "transaçõe.saldo"
+                      "Entity": "transaçõe.saldo_total"
                     }
                   }
                 },
