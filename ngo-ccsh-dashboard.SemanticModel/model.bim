@@ -1881,7 +1881,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Transações",
-                    "ConceptualProperty": "Saldo"
+                    "ConceptualProperty": "Saldo Total"
                   }
                 },
                 "State": "Generated",
@@ -3610,7 +3610,14 @@
         "toTable": "dFinalidades"
       },
       {
-        "name": "3ba87e23-4898-4399-8977-80c5641e341c",
+        "name": "AutoDetected_db8a1892-c11f-4017-98f9-fa7bc80c03e8",
+        "fromColumn": "Subunidade",
+        "fromTable": "Transações",
+        "toColumn": "Subunidade",
+        "toTable": "dSubunidades"
+      },
+      {
+        "name": "4b13e7bc-2634-4e06-8db2-c578b6e5a46f",
         "fromColumn": "Date",
         "fromTable": "dCalendario",
         "joinOnDateBehavior": "datePartOnly",
@@ -3623,13 +3630,6 @@
         "fromTable": "Transações",
         "toColumn": "Date",
         "toTable": "dCalendario"
-      },
-      {
-        "name": "AutoDetected_db8a1892-c11f-4017-98f9-fa7bc80c03e8",
-        "fromColumn": "Subunidade",
-        "fromTable": "Transações",
-        "toColumn": "Subunidade",
-        "toTable": "dSubunidades"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -4209,7 +4209,7 @@
             "lineageTag": "bd633c5c-2621-40cd-866c-c2fe878a46c6"
           },
           {
-            "name": "Saldo",
+            "name": "Saldo Total",
             "annotations": [
               {
                 "name": "PBI_FormatHint",
@@ -4219,6 +4219,18 @@
             "expression": "[Crédito Total] - [Débito Total]",
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "6fcdcbc0-213a-496e-b1aa-2ea66ea1e4fb"
+          },
+          {
+            "name": "Executado IDR",
+            "expression": "[Despesas Total] / [Crédito IDR Total]",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "5d6a360e-18ec-4a02-b256-3b7bfebea2b6"
+          },
+          {
+            "name": "Executado Total",
+            "expression": "[Despesas Total] / [Crédito IDR Total]",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "f7a55cd7-8463-43f9-b933-039e18d32fcc"
           }
         ],
         "partitions": [
@@ -4421,7 +4433,7 @@
                   "table": "LocalDateTable_32e1f282-8cf9-463b-9322-a13d5ca45473"
                 },
                 "isDefault": true,
-                "relationship": "3ba87e23-4898-4399-8977-80c5641e341c"
+                "relationship": "4b13e7bc-2634-4e06-8db2-c578b6e5a46f"
               }
             ]
           },
@@ -4501,7 +4513,8 @@
                 "value": "Automatic"
               }
             ],
-            "dataType": "string",
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "isDataTypeInferred": true,
             "isNameInferred": true,
             "lineageTag": "c794b912-7821-4d02-9ff2-5b3d1e9dbdc3",
@@ -4517,7 +4530,8 @@
                 "value": "Automatic"
               }
             ],
-            "dataType": "string",
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "isDataTypeInferred": true,
             "isNameInferred": true,
             "lineageTag": "49988213-6192-4a32-9135-1e8bf6e29c0f",
@@ -4533,7 +4547,8 @@
                 "value": "Automatic"
               }
             ],
-            "dataType": "string",
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "isDataTypeInferred": true,
             "isNameInferred": true,
             "lineageTag": "db5bd9de-54ac-4d06-8584-228b03954481",
@@ -4569,21 +4584,21 @@
                 "        12,\"Dezembro\"",
                 "    ),",
                 "    \"Dia\", DAY ( [Date] ),",
-                "    \"Ano atual\", IF ( YEAR ( [Date] ) = YEAR ( TODAY () ), \"S\", \"N\" ),",
+                "    \"Ano atual\", IF ( YEAR ( [Date] ) = YEAR ( TODAY () ), True, False ),",
                 "    \"Mês atual\",",
                 "        IF (",
                 "            YEAR ( [Date] ) = YEAR ( TODAY () )",
                 "                && MONTH ( [Date] ) = MONTH ( TODAY () ),",
-                "            \"S\",",
-                "            \"N\"",
+                "            True,",
+                "            False",
                 "        ),",
                 "    \"Dia atual\",",
                 "        IF (",
                 "            YEAR ( [Date] ) = YEAR ( TODAY () )",
                 "                && MONTH ( [Date] ) = MONTH ( TODAY () )",
                 "                && DAY ( [Date] ) = DAY ( TODAY () ),",
-                "            \"S\",",
-                "            \"N\"",
+                "            True,",
+                "            False",
                 "        )",
                 ")"
               ],
@@ -4593,7 +4608,7 @@
         ]
       },
       {
-        "name": "DateTableTemplate_d8ff267f-2e67-4d2c-9fc2-906d6fc4043c",
+        "name": "DateTableTemplate_624d5225-59bf-48e2-9ec3-c205ffdc8866",
         "annotations": [
           {
             "name": "__PBI_TemplateDateTable",
@@ -4618,7 +4633,7 @@
             "formatString": "General Date",
             "isHidden": true,
             "isNameInferred": true,
-            "lineageTag": "d965f7e0-4330-429b-b0a9-5912620f9c02",
+            "lineageTag": "d1e0f915-e371-4caa-87e6-8efad43c0519",
             "sourceColumn": "[Date]",
             "summarizeBy": "none",
             "type": "calculatedTableColumn"
@@ -4640,7 +4655,7 @@
             "expression": "YEAR([Date])",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "ec1385d5-8345-4135-8177-bc32e0806ea8",
+            "lineageTag": "3d325d51-d17e-41fe-a2be-c0282c2d70f2",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -4661,7 +4676,7 @@
             "expression": "MONTH([Date])",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "25c0c5cc-b90c-4b31-b620-984ef5a4124f",
+            "lineageTag": "62e35cb0-594d-4a3d-8367-7f1cc74a3b5e",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -4681,7 +4696,7 @@
             "dataType": "string",
             "expression": "FORMAT([Date], \"MMMM\")",
             "isHidden": true,
-            "lineageTag": "dc8143f6-6b6b-42cb-9639-eb8145ab33b7",
+            "lineageTag": "83198c1d-07e3-475c-a3c1-e994ba222f80",
             "sortByColumn": "MonthNo",
             "summarizeBy": "none",
             "type": "calculated"
@@ -4703,7 +4718,7 @@
             "expression": "INT(([MonthNo] + 2) / 3)",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "ea656df0-94f6-4537-b9b4-1de23341a9c6",
+            "lineageTag": "50887021-bfc3-44ce-a918-3bb2cebfee0b",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -4723,7 +4738,7 @@
             "dataType": "string",
             "expression": "\"Qtr \" & [QuarterNo]",
             "isHidden": true,
-            "lineageTag": "f0585822-5dd6-459d-bc17-f29c619c9c05",
+            "lineageTag": "7984fb9d-b7e4-48be-b331-78970994f389",
             "sortByColumn": "QuarterNo",
             "summarizeBy": "none",
             "type": "calculated"
@@ -4745,7 +4760,7 @@
             "expression": "DAY([Date])",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "75316963-8dcf-4910-9ac2-037877d4f79a",
+            "lineageTag": "a9ee61be-b684-45c0-b688-2023d1ea40e3",
             "summarizeBy": "none",
             "type": "calculated"
           }
@@ -4763,37 +4778,37 @@
               {
                 "name": "Year",
                 "column": "Year",
-                "lineageTag": "ac07dbd8-41d7-48e6-b2e2-2a04f1d8179d",
+                "lineageTag": "cf47d9c0-a375-4bcb-adf0-edfa713716ef",
                 "ordinal": 0
               },
               {
                 "name": "Quarter",
                 "column": "Quarter",
-                "lineageTag": "3f1fabae-efa4-48c6-bc68-d5709c9b7b9e",
+                "lineageTag": "e35d2593-198a-4c06-97e0-b3422f798fc0",
                 "ordinal": 1
               },
               {
                 "name": "Month",
                 "column": "Month",
-                "lineageTag": "ab72b66b-8fcc-4a2e-aff2-b459e3937883",
+                "lineageTag": "3c6d0131-aa80-4167-998b-17dddd9767f1",
                 "ordinal": 2
               },
               {
                 "name": "Day",
                 "column": "Day",
-                "lineageTag": "f99b19bf-6b44-44aa-951c-55c79dbf9424",
+                "lineageTag": "e229297c-729a-4098-92d2-f541fc45394e",
                 "ordinal": 3
               }
             ],
-            "lineageTag": "a7edd956-2f35-4909-8147-1bf8c03a4ece"
+            "lineageTag": "6b49ca66-8288-45f8-918f-bcfb5be22869"
           }
         ],
         "isHidden": true,
         "isPrivate": true,
-        "lineageTag": "b5766227-6d7b-44eb-b991-2414398c99ba",
+        "lineageTag": "872208b9-5f02-4da5-a893-b2b1198cfd74",
         "partitions": [
           {
-            "name": "DateTableTemplate_d8ff267f-2e67-4d2c-9fc2-906d6fc4043c",
+            "name": "DateTableTemplate_624d5225-59bf-48e2-9ec3-c205ffdc8866",
             "mode": "import",
             "source": {
               "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
@@ -4824,7 +4839,7 @@
             "formatString": "General Date",
             "isHidden": true,
             "isNameInferred": true,
-            "lineageTag": "c7675b14-0923-4fe9-961d-bdee0784ce95",
+            "lineageTag": "68972bf3-bc5e-4dee-b031-174efc4a362c",
             "sourceColumn": "[Date]",
             "summarizeBy": "none",
             "type": "calculatedTableColumn"
@@ -4846,7 +4861,7 @@
             "expression": "YEAR([Date])",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "b1b02560-e7e0-4555-ae8c-0e2f8d849900",
+            "lineageTag": "951a611d-74b1-42fc-bbcb-0a2fa41ba3c9",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -4867,7 +4882,7 @@
             "expression": "MONTH([Date])",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "e5b60961-c830-4d45-bb4d-b9c003ecf6f5",
+            "lineageTag": "639797dc-6666-4cc9-a106-2822045a746d",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -4887,7 +4902,7 @@
             "dataType": "string",
             "expression": "FORMAT([Date], \"MMMM\")",
             "isHidden": true,
-            "lineageTag": "ff82cc38-4e74-4d88-bcf4-16a1f7fa56ae",
+            "lineageTag": "5fe5c2cb-e4fe-4579-ab27-e4684a28aad9",
             "sortByColumn": "MonthNo",
             "summarizeBy": "none",
             "type": "calculated"
@@ -4909,7 +4924,7 @@
             "expression": "INT(([MonthNo] + 2) / 3)",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "81724443-4f7b-473d-b76a-e3b237ecd20f",
+            "lineageTag": "04291097-0928-4ba1-8c64-83360cccbea3",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -4929,7 +4944,7 @@
             "dataType": "string",
             "expression": "\"Qtr \" & [QuarterNo]",
             "isHidden": true,
-            "lineageTag": "f8921654-9cd1-4cb2-88ab-32d81b3a4fac",
+            "lineageTag": "739e58cc-c03f-4e80-8898-5ce57272b706",
             "sortByColumn": "QuarterNo",
             "summarizeBy": "none",
             "type": "calculated"
@@ -4951,7 +4966,7 @@
             "expression": "DAY([Date])",
             "formatString": "0",
             "isHidden": true,
-            "lineageTag": "a5026ca7-aa23-40a8-ba18-53bc8aeda231",
+            "lineageTag": "a74ab3e2-3af2-402f-abb3-9a3281a9ac13",
             "summarizeBy": "none",
             "type": "calculated"
           }
@@ -4969,29 +4984,29 @@
               {
                 "name": "Year",
                 "column": "Year",
-                "lineageTag": "95538929-4d55-438b-ad2e-95ae50ccb1f9",
+                "lineageTag": "a24c037f-67ed-4845-bb24-d30954b95925",
                 "ordinal": 0
               },
               {
                 "name": "Quarter",
                 "column": "Quarter",
-                "lineageTag": "32b21537-4bd0-4940-bb55-1620fef23902",
+                "lineageTag": "75401369-73e4-42ae-940a-d6ac2325fcec",
                 "ordinal": 1
               },
               {
                 "name": "Month",
                 "column": "Month",
-                "lineageTag": "5c2748ba-6421-40ae-974c-e0e737a992dc",
+                "lineageTag": "613e5567-a547-4de9-8146-31397aafa3de",
                 "ordinal": 2
               },
               {
                 "name": "Day",
                 "column": "Day",
-                "lineageTag": "3102459c-b836-442e-8648-1fc0ee40c162",
+                "lineageTag": "4f5f1234-0a79-42fe-8230-70ec02dba05d",
                 "ordinal": 3
               }
             ],
-            "lineageTag": "3cc9c8e7-77d1-43fe-abb3-69c89b5fd959"
+            "lineageTag": "ea58fa0b-1443-4ef5-9929-aa860d239635"
           }
         ],
         "isHidden": true,

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "ab460ad3383c8049e27b",
+  "name": "0ebfd4cb92ba8d205049",
   "position": {
-    "x": 988.56674856674863,
+    "x": 117.41195741195742,
     "y": 119.50859950859952,
-    "z": 3000,
-    "height": 168.7796887796888,
-    "width": 165.63472563472564,
-    "tabOrder": 0
+    "z": 4000,
+    "height": 189.74610974610977,
+    "width": 192.89107289107289,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'logo_ccsh.png'"
+                      "Value": "'UFSM_principal_cor.png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "logo_ccsh21052027401065843.png"
+                      "ItemName": "UFSM_principal_cor7553826955928793.png"
                     }
                   }
                 },
@@ -53,7 +53,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ccsh logo'"
+                  "Value": "'ufsm logo'"
                 }
               }
             }
