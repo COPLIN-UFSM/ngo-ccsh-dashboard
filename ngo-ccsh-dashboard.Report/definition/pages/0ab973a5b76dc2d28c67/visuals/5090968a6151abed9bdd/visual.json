@@ -6,7 +6,8 @@
     "y": 0,
     "z": 2000,
     "height": 63.237167372151845,
-    "width": 588.10810810810813
+    "width": 588.10810810810813,
+    "tabOrder": 1000
   },
   "visualGroup": {
     "displayName": "top text",

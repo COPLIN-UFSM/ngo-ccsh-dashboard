@@ -41,11 +41,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Saldo Total"
+                  "Property": "Débito Total"
                 }
               },
-              "queryRef": "Transações.Saldo",
-              "nativeQueryRef": "Saldo"
+              "queryRef": "Transações.Débito Total",
+              "nativeQueryRef": "Débito Total"
             }
           ]
         }
@@ -60,7 +60,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Saldo Total"
+                "Property": "Débito Total"
               }
             },
             "direction": "Descending"
@@ -110,6 +110,25 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "showDynamicLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dynamicLabelValue": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Transações"
+                    }
+                  },
+                  "Property": "Saldo Total"
                 }
               }
             }

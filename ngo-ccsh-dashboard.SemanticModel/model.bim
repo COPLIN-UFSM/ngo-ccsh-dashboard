@@ -8,7 +8,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\",\"Errors in Transações\"]"
+        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -3739,53 +3739,6 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
-    "expressions": [
-      {
-        "name": "Errors in Transações",
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "expression": [
-          "let",
-          "Source = Transações,",
-          "  #\"Detected Type Mismatches\" = let",
-          "    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),",
-          "    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),",
-          "    fieldNames = Record.FieldNames(recordTypeFields),",
-          "    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),",
-          "    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = \"The type of the value does not match the type of the column.\", Detail = v], fieldTypes{i}})",
-          "in",
-          "    Table.TransformColumns(Source, pairs),",
-          "  #\"Added Index\" = Table.AddIndexColumn(#\"Detected Type Mismatches\", \"Row Number\" ,1),",
-          "  #\"Kept Errors\" = Table.SelectRowsWithErrors(#\"Added Index\", {\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Finalidade (detalhada)\", \"Pago\", \"Tipo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
-          "  #\"Reordered Columns\" = Table.ReorderColumns(#\"Kept Errors\", {\"Row Number\", \"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Finalidade (detalhada)\", \"Pago\", \"Tipo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"})",
-          "in",
-          "  #\"Reordered Columns\""
-        ],
-        "kind": "m",
-        "lineageTag": "38e9d582-874b-4907-afbb-f21d29702652",
-        "queryGroup": "Query Errors - 10/03/2026 08:05:28"
-      }
-    ],
-    "queryGroups": [
-      {
-        "annotations": [
-          {
-            "name": "PBI_QueryGroupOrder",
-            "value": "0"
-          }
-        ],
-        "description": "Errors in queries that were loaded on 10/03/2026 08:05:28.",
-        "folder": "Query Errors - 10/03/2026 08:05:28"
-      }
-    ],
     "relationships": [
       {
         "name": "e60f0846-7b52-9bbc-6d72-54d8ad8d05c3",
@@ -4111,6 +4064,32 @@
             "lineageTag": "4bd00013-8489-42b4-961d-cf75a1a42f5b",
             "sourceColumn": "Montante (signed)",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "Modalidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "558e51b2-a21c-41c3-95b3-68ec5d98575b",
+            "sourceColumn": "Modalidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Natureza",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e95c20e1-bdc5-4b16-a1d2-42786113f539",
+            "sourceColumn": "Natureza",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "d4a51c54-a899-4bbd-9d9b-358e6d75fa7f",
@@ -4413,7 +4392,7 @@
           },
           {
             "name": "Executado Total",
-            "expression": "[Despesas Total] / [Crédito IDR Total]",
+            "expression": "[Despesas Total] / [Crédito Total]",
             "formatString": "0.00%;-0.00%;0.00%",
             "lineageTag": "f7a55cd7-8463-43f9-b933-039e18d32fcc"
           }
@@ -4436,14 +4415,14 @@
                 "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"não\",\"False\",Replacer.ReplaceText,{\"Pago\"}),",
                 "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value1\",{{\"Pago\", type logical}}),",
                 "    #\"Merged Columns\" = Table.CombineColumns(#\"Changed Type2\",{\"Descrição\", \"Nome / Beneficiário / Setor\"},Combiner.CombineTextByDelimiter(\". \", QuoteStyle.None),\"Descrição + Beneficiário\"),",
-                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Merged Columns\",{\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade (Grupo)\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Merged Columns\",{\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
                 "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns\",{{\"Montante (signed)\", \"Montante\"}}),",
                 "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Renamed Columns1\", \"Montante\", \"Montante - Copy\"),",
                 "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Duplicated Column\",{{\"Montante - Copy\", \"Montante (signed)\"}}),",
                 "    #\"Reordered Columns1\" = Table.ReorderColumns(#\"Renamed Columns2\",{\"Linha\", \"Data Lançamento\", \"Montante\", \"Montante (signed)\", ",
-                "\"Subunidade\", \"Tipo subunidade\", \"Finalidade (Grupo)\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
+                "\"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
                 "    #\"Calculated Absolute Value\" = Table.TransformColumns(#\"Reordered Columns1\",{{\"Montante\", Number.Abs, type number}}),",
-                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Calculated Absolute Value\",{\"Finalidade (Grupo)\", \"Tipo subunidade\"})",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Calculated Absolute Value\",{\"Tipo subunidade\"})",
                 "in",
                 "    #\"Removed Columns\""
               ],
@@ -4515,10 +4494,9 @@
                 "let",
                 "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1_Xtx0snoLOuKp9DWR1D9C6kG4rZpVVOQyo8zCd1N5fY/edit?usp=sharing\"),",
                 "    #\"lista - tipos de finalidades_Table\" = Source{[name=\"lista - tipos de finalidades\",ItemKind=\"Table\"]}[Data],",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"lista - tipos de finalidades_Table\", [PromoteAllScalars=true]),",
-                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Promoted Headers\",{\"Finalidade (Grupo)\"})",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"lista - tipos de finalidades_Table\", [PromoteAllScalars=true])",
                 "in",
-                "    #\"Removed Columns\""
+                "    #\"Promoted Headers\""
               ],
               "type": "m"
             }

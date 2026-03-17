@@ -47,22 +47,17 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Transações"
-                        }
-                      },
-                      "Property": "Montante (signed)"
+                    "SourceRef": {
+                      "Entity": "Transações"
                     }
                   },
-                  "Function": 0
+                  "Property": "Montante (signed)"
                 }
               },
               "queryRef": "Sum(Transações.Montante (signed))",
-              "nativeQueryRef": "Montante",
+              "nativeQueryRef": "Montante (signed)",
               "displayName": "Montante"
             }
           ]
@@ -72,21 +67,16 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Transações"
-                      }
-                    },
-                    "Property": "Montante (signed)"
+                  "SourceRef": {
+                    "Entity": "Transações"
                   }
                 },
-                "Function": 0
+                "Property": "Data Lançamento"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -98,7 +88,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "849.4690075443165D"
+                  "Value": "870.6371762871062D"
                 }
               }
             }
