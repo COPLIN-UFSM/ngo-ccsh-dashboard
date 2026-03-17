@@ -1863,6 +1863,22 @@
                   "Value": "Hidden"
                 }
               },
+              "transaçõe.modalidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Modalidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "modalidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
               "transaçõe.montante": {
                 "Definition": {
                   "Binding": {
@@ -1897,6 +1913,22 @@
                     "montante": {
                       "State": "Generated",
                       "Weight": 0.75
+                    }
+                  }
+                ]
+              },
+              "transaçõe.natureza": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Natureza"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "natureza": {
+                      "State": "Generated"
                     }
                   }
                 ]
@@ -3541,6 +3573,39 @@
                 },
                 "State": "Generated"
               },
+              "transaçõe_has_modalidade": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.modalidade"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_modalidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.modalidade": {
+                    "Target": {
+                      "Entity": "transaçõe.modalidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "transaçõe_has_montante": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
@@ -3656,6 +3721,39 @@
                   "transaçõe.montante_signed": {
                     "Target": {
                       "Entity": "transaçõe.montante_signed"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "transaçõe_has_natureza": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.natureza"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_naturezas",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.natureza": {
+                    "Target": {
+                      "Entity": "transaçõe.natureza"
                     }
                   }
                 },
