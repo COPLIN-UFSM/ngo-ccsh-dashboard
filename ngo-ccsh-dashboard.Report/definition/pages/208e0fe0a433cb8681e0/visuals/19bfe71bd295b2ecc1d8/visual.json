@@ -4,7 +4,7 @@
   "position": {
     "x": 29.09090909090909,
     "y": 14.545454545454545,
-    "z": 11000,
+    "z": 13500,
     "height": 92.72727272727272,
     "width": 94.545454545454533,
     "tabOrder": 11000
@@ -39,6 +39,21 @@
                       "Value": "'Normal'"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'logo'"
                 }
               }
             }

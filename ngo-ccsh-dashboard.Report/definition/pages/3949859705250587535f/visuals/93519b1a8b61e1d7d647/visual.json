@@ -342,7 +342,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Resumo'"
+                  "Value": "'button summary'"
                 }
               }
             }

@@ -367,7 +367,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Resumo'"
+                  "Value": "'button clear filters'"
                 }
               }
             }
