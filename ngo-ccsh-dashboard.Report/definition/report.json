@@ -2,13 +2,22 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
   "themeCollection": {
     "baseTheme": {
-      "name": "CY25SU12",
+      "name": "CY26SU02",
       "reportVersionAtImport": {
-        "visual": "2.5.0",
+        "visual": "2.6.0",
         "report": "3.1.0",
         "page": "2.3.0"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "NGO_CCSH6160782311529088.json",
+      "reportVersionAtImport": {
+        "visual": "2.6.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
     }
   },
   "filterConfig": {
@@ -227,8 +236,8 @@
       "type": "SharedResources",
       "items": [
         {
-          "name": "CY25SU12",
-          "path": "BaseThemes/CY25SU12.json",
+          "name": "CY26SU02",
+          "path": "BaseThemes/CY26SU02.json",
           "type": "BaseTheme"
         }
       ]
@@ -256,6 +265,11 @@
           "name": "biblioteca_ccsh6449905037512423.jpg",
           "path": "biblioteca_ccsh6449905037512423.jpg",
           "type": "Image"
+        },
+        {
+          "name": "NGO_CCSH6160782311529088.json",
+          "path": "NGO_CCSH6160782311529088.json",
+          "type": "CustomTheme"
         }
       ]
     }

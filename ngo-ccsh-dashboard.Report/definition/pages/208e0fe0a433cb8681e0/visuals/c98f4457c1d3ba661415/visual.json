@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 657.673640167364,
-    "z": 7001,
+    "z": 7000,
     "height": 62.1255230125523,
     "width": 153.1715481171548,
-    "tabOrder": 13001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -17,23 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Transações"
-                        }
-                      },
-                      "Property": "Data Lançamento"
+                    "SourceRef": {
+                      "Entity": "Transações"
                     }
                   },
-                  "Function": 4
+                  "Property": "Última atualização"
                 }
               },
-              "queryRef": "Min(Transações.Data Lançamento)",
-              "nativeQueryRef": "Última atualização",
-              "displayName": "Última atualização"
+              "queryRef": "Transações.Última atualização",
+              "nativeQueryRef": "Última atualização"
             }
           ]
         }
@@ -42,18 +36,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Transações"
-                      }
-                    },
-                    "Property": "Data Lançamento"
+                  "SourceRef": {
+                    "Entity": "Transações"
                   }
                 },
-                "Function": 4
+                "Property": "Última atualização"
               }
             },
             "direction": "Ascending"

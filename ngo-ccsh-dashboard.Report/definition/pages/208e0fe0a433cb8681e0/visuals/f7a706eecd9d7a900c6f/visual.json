@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "1a05a61a8609b7bc3102",
+  "name": "f7a706eecd9d7a900c6f",
   "position": {
-    "x": 1010,
-    "y": 102,
-    "z": 5000,
-    "height": 186,
-    "width": 250,
-    "tabOrder": 4000
+    "x": 937.74343122102,
+    "y": 186.95517774343122,
+    "z": 9000,
+    "height": 162.225656877898,
+    "width": 322.47295208655333,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "gauge",
@@ -23,11 +23,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Crédito Total"
+                  "Property": "Crédito Capital"
                 }
               },
-              "queryRef": "Transações.Créditos totais",
-              "nativeQueryRef": "Créditos totais"
+              "queryRef": "Transações.Crédito Capital",
+              "nativeQueryRef": "Crédito Capital"
             }
           ]
         },
@@ -41,11 +41,11 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Débito Total"
+                  "Property": "Débito Capital Acumulado"
                 }
               },
-              "queryRef": "Transações.Débito Total",
-              "nativeQueryRef": "Débito Total"
+              "queryRef": "Transações.Débito Capital Acumulado",
+              "nativeQueryRef": "Débito Capital Acumulado"
             }
           ]
         }
@@ -60,7 +60,7 @@
                     "Entity": "Transações"
                   }
                 },
-                "Property": "Débito Total"
+                "Property": "Débito Capital Acumulado"
               }
             },
             "direction": "Descending"
@@ -77,6 +77,13 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -97,6 +104,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }
@@ -128,7 +142,7 @@
                       "Entity": "Transações"
                     }
                   },
-                  "Property": "Saldo Total"
+                  "Property": "Saldo Capital"
                 }
               }
             }
@@ -206,7 +220,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Saldo'"
+                  "Value": "'Saldo capital'"
                 }
               }
             }

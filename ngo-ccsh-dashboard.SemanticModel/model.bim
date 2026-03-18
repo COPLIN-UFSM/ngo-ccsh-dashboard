@@ -1462,6 +1462,42 @@
                       "Type": "Noun",
                       "Weight": 0.727
                     }
+                  }
+                ]
+              },
+              "transaçõe.débito_total_acumulado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Transações",
+                    "ConceptualProperty": "Débito Total Acumulado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "débito total acumulado": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "débito aggregate acumulado": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "débito overall acumulado": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
                   },
                   {
                     "Executado": {
@@ -3375,6 +3411,39 @@
                 },
                 "State": "Generated"
               },
+              "transaçõe_has_débito_total_acumulado": {
+                "Binding": {
+                  "ConceptualEntity": "Transações"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "transaçõe.débito_total_acumulado"
+                      },
+                      "Subject": {
+                        "Role": "transaçõe"
+                      }
+                    },
+                    "ID": "transações_have_débito_total_acumulado",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "transaçõe": {
+                    "Target": {
+                      "Entity": "transaçõe"
+                    }
+                  },
+                  "transaçõe.débito_total_acumulado": {
+                    "Target": {
+                      "Entity": "transaçõe.débito_total_acumulado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "transaçõe_has_débito_transferências_capital": {
                 "Binding": {
                   "ConceptualEntity": "Transações"
@@ -4203,7 +4272,11 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Fluxo] = \"Débito\"",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
@@ -4220,7 +4293,11 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'Transações'[Fluxo] = \"Crédito\"",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
@@ -4238,7 +4315,11 @@
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Crédito\",",
-              "    dFinalidades[Modalidade] = \"IDR\"",
+              "    dFinalidades[Modalidade] = \"IDR\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
@@ -4256,7 +4337,11 @@
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Crédito\",",
-              "    dFinalidades[Modalidade] = \"Transferência\"",
+              "    dFinalidades[Modalidade] = \"Transferência\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
@@ -4276,7 +4361,11 @@
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Débito\",",
               "    'dFinalidades'[Modalidade] = \"Despesas\",",
-              "    'dFinalidades'[Natureza] = \"Custeio\"",
+              "    'dFinalidades'[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
@@ -4295,7 +4384,11 @@
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Débito\",",
-              "    'dFinalidades'[Modalidade] = \"Despesas\"",
+              "    'dFinalidades'[Modalidade] = \"Despesas\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
@@ -4307,7 +4400,11 @@
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Crédito\",",
-              "    'dFinalidades'[Natureza] = \"Custeio\"",
+              "    'dFinalidades'[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4319,7 +4416,11 @@
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Crédito\",",
-              "    'dFinalidades'[Natureza] = \"Capital\"",
+              "    'dFinalidades'[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4332,7 +4433,11 @@
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Crédito\",",
               "    dFinalidades[Modalidade] = \"Transferência\",",
-              "    dFinalidades[Natureza] = \"Custeio\"",
+              "    dFinalidades[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4345,7 +4450,11 @@
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Crédito\",",
               "    dFinalidades[Modalidade] = \"Transferência\",",
-              "    dFinalidades[Natureza] = \"Capital\"",
+              "    dFinalidades[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4359,7 +4468,11 @@
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Débito\",",
               "    'dFinalidades'[Modalidade] = \"Despesas\",",
-              "    'dFinalidades'[Natureza] = \"Capital\"",
+              "    'dFinalidades'[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4377,7 +4490,11 @@
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Débito\",",
-              "    'dFinalidades'[Modalidade] = \"Transferência\"",
+              "    'dFinalidades'[Modalidade] = \"Transferência\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
@@ -4390,7 +4507,11 @@
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Débito\",",
               "    'dFinalidades'[Modalidade] = \"Transferência\",",
-              "    dFinalidades[Natureza] = \"Custeio\"",
+              "    dFinalidades[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4403,7 +4524,11 @@
               "    SUM('Transações'[Montante]),",
               "    'Transações'[Fluxo] = \"Débito\",",
               "    'dFinalidades'[Modalidade] = \"Transferência\",",
-              "    dFinalidades[Natureza] = \"Capital\"",
+              "    dFinalidades[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4414,7 +4539,11 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'dFinalidades'[Modalidade] = \"Transferência\"",
+              "    'dFinalidades'[Modalidade] = \"Transferência\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4425,7 +4554,11 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'dFinalidades'[Modalidade] = \"Despesas\"",
+              "    'dFinalidades'[Modalidade] = \"Despesas\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4436,7 +4569,11 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'dFinalidades'[Modalidade] = \"IDR\"",
+              "    'dFinalidades'[Modalidade] = \"IDR\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4447,7 +4584,11 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'dFinalidades'[Natureza] = \"Custeio\"",
+              "    'dFinalidades'[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
@@ -4464,11 +4605,43 @@
             "expression": [
               "CALCULATE(",
               "    SUM('Transações'[Montante]),",
-              "    'dFinalidades'[Natureza] = \"Capital\"",
+              "    'dFinalidades'[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
               ")"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "bd633c5c-2621-40cd-866c-c2fe878a46c6"
+          },
+          {
+            "name": "Executado IDR",
+            "expression": [
+              "CALCULATE(",
+              "    [Despesas Total] / [Crédito IDR Total],",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "5d6a360e-18ec-4a02-b256-3b7bfebea2b6"
+          },
+          {
+            "name": "Executado Total",
+            "expression": [
+              "CALCULATE(",
+              "    [Despesas Total] / [Crédito Total],",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "f7a55cd7-8463-43f9-b933-039e18d32fcc"
           },
           {
             "name": "Saldo Total",
@@ -4478,21 +4651,219 @@
                 "value": "{\"currencyCulture\":\"pt-BR\"}"
               }
             ],
-            "expression": "[Crédito Total] - [Débito Total]",
+            "expression": [
+              "CALCULATE(",
+              "    [Crédito Total] - [Débito Total],",
+              "    REMOVEFILTERS(dCalendario[Mês nome]),",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
-            "lineageTag": "6fcdcbc0-213a-496e-b1aa-2ea66ea1e4fb"
+            "lineageTag": "cace3812-9f5c-4004-9365-9a06eafaa0b2"
           },
           {
-            "name": "Executado IDR",
-            "expression": "[Despesas Total] / [Crédito IDR Total]",
-            "formatString": "0.00%;-0.00%;0.00%",
-            "lineageTag": "5d6a360e-18ec-4a02-b256-3b7bfebea2b6"
+            "name": "Débito Total Acumulado",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    [Débito Total],",
+              "    FILTER(",
+              "        ALL(dCalendario),",
+              "        (dCalendario[Ano] = SELECTEDVALUE(dCalendario[Ano], YEAR(TODAY()))) && (dCalendario[Mês num] <= MAX(dCalendario[Mês num]))",
+              "    )",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "af0b2267-156c-4d3b-b536-30269739cb9b"
           },
           {
-            "name": "Executado Total",
-            "expression": "[Despesas Total] / [Crédito Total]",
-            "formatString": "0.00%;-0.00%;0.00%",
-            "lineageTag": "f7a55cd7-8463-43f9-b933-039e18d32fcc"
+            "name": "Última atualização",
+            "expression": [
+              "CALCULATE(",
+              "    MAX('Transações'[Data Lançamento]),",
+              "    REMOVEFILTERS('Transações')",
+              ")"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "72875dc9-7ff2-4866-bdb1-97685597e571"
+          },
+          {
+            "name": "Débito Capital Acumulado",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario),",
+              "        (dCalendario[Ano] = SELECTEDVALUE(dCalendario[Ano], YEAR(TODAY()))) && (dCalendario[Mês num] <= MAX(dCalendario[Mês num]))",
+              "    )",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "e679ccb9-8d79-4abc-befa-22b967715860"
+          },
+          {
+            "name": "Débito Custeio Acumulado",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    'dFinalidades'[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario),",
+              "        (dCalendario[Ano] = SELECTEDVALUE(dCalendario[Ano], YEAR(TODAY()))) && (dCalendario[Mês num] <= MAX(dCalendario[Mês num]))",
+              "    )",
+              ")"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "79fcb46c-9571-4ab7-bd68-797764829e04"
+          },
+          {
+            "name": "Crédito Custeio",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    dFinalidades[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "d7312610-86a3-4239-b851-d9acadac77cb"
+          },
+          {
+            "name": "Crédito Capital",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Crédito\",",
+              "    dFinalidades[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "171a7121-1991-4744-a60c-648ba925523c"
+          },
+          {
+            "name": "Saldo Custeio",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    [Crédito Custeio] - [Débito Custeio],",
+              "    REMOVEFILTERS(dCalendario[Mês nome]),",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "fbf5183c-8315-4c2d-847c-2a70ddf1e9d7"
+          },
+          {
+            "name": "Saldo Capital",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    [Crédito Capital] - [Débito Capital],",
+              "    REMOVEFILTERS(dCalendario[Mês nome]),",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "42b2e225-2a69-4c8b-b2c5-920c163ee37a"
+          },
+          {
+            "name": "Débito Custeio",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    dFinalidades[Natureza] = \"Custeio\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "eafbf64b-7709-4bed-b5b3-984fb0d5f0b8"
+          },
+          {
+            "name": "Débito Capital",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(",
+              "    SUM('Transações'[Montante]),",
+              "    'Transações'[Fluxo] = \"Débito\",",
+              "    dFinalidades[Natureza] = \"Capital\",",
+              "    FILTER(",
+              "        ALL(dCalendario[Ano]),",
+              "        ISFILTERED(dCalendario[Ano]) || dCalendario[Ano] = YEAR(TODAY())",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "6134d7c5-6c05-4db2-b88c-9d78e461413c"
           }
         ],
         "partitions": [
