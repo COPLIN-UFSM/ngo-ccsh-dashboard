@@ -35,6 +35,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "dFinalidades"
+                    }
+                  },
+                  "Property": "Finalidade"
+                }
+              },
+              "queryRef": "dFinalidades.Finalidade",
+              "nativeQueryRef": "Finalidade"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "Transações"
                     }
                   },
@@ -88,13 +102,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "870.6371762871062D"
+                  "Value": "712.6995212484733D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Transações.Descrição + Beneficiário"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "160.04413160766035D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dFinalidades.Finalidade"
           }
         }
       ],
