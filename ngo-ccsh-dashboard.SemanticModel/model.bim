@@ -8,7 +8,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\"]"
+        "value": "[\"Transações\",\"dFinalidades\",\"dSubunidades\",\"Errors in Transações\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -3906,6 +3906,53 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Errors in Transações",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          }
+        ],
+        "expression": [
+          "let",
+          "Source = Transações,",
+          "  #\"Detected Type Mismatches\" = let",
+          "    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),",
+          "    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),",
+          "    fieldNames = Record.FieldNames(recordTypeFields),",
+          "    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),",
+          "    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = \"The type of the value does not match the type of the column.\", Detail = v], fieldTypes{i}})",
+          "in",
+          "    Table.TransformColumns(Source, pairs),",
+          "  #\"Added Index\" = Table.AddIndexColumn(#\"Detected Type Mismatches\", \"Row Number\" ,1),",
+          "  #\"Kept Errors\" = Table.SelectRowsWithErrors(#\"Added Index\", {\"Linha\", \"Data Lançamento\", \"Montante\", \"Montante (signed)\", \"Subunidade\", \"Finalidade (Grupo)\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
+          "  #\"Reordered Columns\" = Table.ReorderColumns(#\"Kept Errors\", {\"Row Number\", \"Linha\", \"Data Lançamento\", \"Montante\", \"Montante (signed)\", \"Subunidade\", \"Finalidade (Grupo)\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"})",
+          "in",
+          "  #\"Reordered Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "a2402628-8d4d-47e0-864e-5d3c9bc466f7",
+        "queryGroup": "Query Errors - 06/04/2026 12:59:02"
+      }
+    ],
+    "queryGroups": [
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "1"
+          }
+        ],
+        "description": "Errors in queries that were loaded on 06/04/2026 12:59:02.",
+        "folder": "Query Errors - 06/04/2026 12:59:02"
+      }
+    ],
     "relationships": [
       {
         "name": "e60f0846-7b52-9bbc-6d72-54d8ad8d05c3",
@@ -4048,8 +4095,7 @@
                 "property": "IsHidden"
               }
             ],
-            "dataType": "boolean",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "dataType": "string",
             "isHidden": true,
             "lineageTag": "2d0c5d08-2d15-4c43-8ce5-83e2a41bab4b",
             "sourceColumn": "Pago",
@@ -5042,8 +5088,7 @@
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type1\",{{\"Montante (R$)\", \"Montante (signed)\"}}),",
                 "    #\"Replaced Value\" = Table.ReplaceValue(#\"Renamed Columns\",\"sim\",\"True\",Replacer.ReplaceText,{\"Pago\"}),",
                 "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"não\",\"False\",Replacer.ReplaceText,{\"Pago\"}),",
-                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value1\",{{\"Pago\", type logical}}),",
-                "    #\"Merged Columns\" = Table.CombineColumns(#\"Changed Type2\",{\"Descrição\", \"Nome / Beneficiário / Setor\"},Combiner.CombineTextByDelimiter(\". \", QuoteStyle.None),\"Descrição + Beneficiário\"),",
+                "    #\"Merged Columns\" = Table.CombineColumns(#\"Replaced Value1\",{\"Descrição\", \"Nome / Beneficiário / Setor\"},Combiner.CombineTextByDelimiter(\". \", QuoteStyle.None),\"Descrição + Beneficiário\"),",
                 "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Merged Columns\",{\"Linha\", \"Data Lançamento\", \"Montante (signed)\", \"Subunidade\", \"Tipo subunidade\", \"Finalidade\", \"Pago\", \"Fluxo\", \"Descrição + Beneficiário\", \"Doc de Solitação\", \"Doc de Pagamento\", \"Lista SIAFI\", \"Empenho SIE\", \"Empenho SIAFI\", \"Local / Trecho\", \"Quantidade\"}),",
                 "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns\",{{\"Montante (signed)\", \"Montante\"}}),",
                 "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Renamed Columns1\", \"Montante\", \"Montante - Copy\"),",
