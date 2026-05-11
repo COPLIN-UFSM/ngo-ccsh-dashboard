@@ -38,6 +38,20 @@
                       "Entity": "dFinalidades"
                     }
                   },
+                  "Property": "Natureza"
+                }
+              },
+              "queryRef": "dFinalidades.Natureza",
+              "nativeQueryRef": "Natureza"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dFinalidades"
+                    }
+                  },
                   "Property": "Finalidade"
                 }
               },
@@ -102,7 +116,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "712.6995212484733D"
+                  "Value": "630.1444440218324D"
                 }
               }
             }
