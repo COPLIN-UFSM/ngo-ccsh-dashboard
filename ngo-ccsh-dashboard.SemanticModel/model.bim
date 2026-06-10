@@ -5395,6 +5395,14 @@
           }
         ],
         "lineageTag": "720f87c4-3e12-4102-a7ce-ee754875170c",
+        "measures": [
+          {
+            "name": "Último ano",
+            "expression": "max([Ano])",
+            "formatString": "0",
+            "lineageTag": "b0a034b4-320b-4db0-a7ff-e86ce465e309"
+          }
+        ],
         "partitions": [
           {
             "name": "dCalendario",
